@@ -1,0 +1,15 @@
+# robots.txt per Offerte Salute (offertesalute.it)
+User-agent: *
+Allow: /
+Allow: /assets/
+Allow: /style.css
+Allow: /script.js
+
+# Escludi file di sviluppo e backup
+Disallow: /*.bak
+Disallow: /*watchdog*
+Disallow: /*.sh
+Disallow: /*.log
+
+# Mappa del sito XML
+Sitemap: https://offertesalute.it/sitemap.xml
