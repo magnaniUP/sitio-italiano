@@ -1,6 +1,13 @@
 <!DOCTYPE html>
 <html lang="it">
 <head>
+  <!-- Google Tag Manager -->
+  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+  })(window,document,'script','dataLayer','GTM-TFLLMZCB');</script>
+  <!-- End Google Tag Manager -->
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -21,7 +28,7 @@
   <meta property="og:url" content="https://offertesalute.it/slimmatica">
   <meta property="og:title" content="Slimmatica - Il tuo percorso naturale per una silhouette snella">
   <meta property="og:description" content="Formula innovativa con ingredienti naturali per supportare il metabolismo, ridurre l'appetito e favorire la combustione dei grassi. Spedizione gratuita in tutta Italia.">
-  <meta property="og:image" content="https://offertesalute.it/assets/slimmatica-hero.webp">
+  <meta property="og:image" content="https://offertesalute.it/assets/images/slimmatica-hero.webp">
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
   <meta property="og:image:alt" content="Slimmatica Integratore Alimentare Naturale">
@@ -30,7 +37,7 @@
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Slimmatica | Integratore Naturale per una Silhouette Snella">
   <meta name="twitter:description" content="Formula innovativa con ingredienti naturali per supportare il metabolismo e la silhouette. Spedizione gratuita in tutta Italia.">
-  <meta name="twitter:image" content="https://offertesalute.it/assets/slimmatica-hero.webp">
+  <meta name="twitter:image" content="https://offertesalute.it/assets/images/slimmatica-hero.webp">
 
   <!-- Meta Mobile & Theme -->
   <meta name="theme-color" content="#322119">
@@ -41,7 +48,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 
   <!-- Foglio di Stile Esterno -->
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="assets/css/style.css">
 
   <!-- Foglio di Stile Incorporato per Resa Immediata Senza Cache -->
   <style>
@@ -219,6 +226,141 @@ button:focus-visible {
 
 .nav-anchor:hover::after {
   width: 100%;
+}
+
+/* ========================================================
+   DROPDOWN MENU PRODOTTI
+   ======================================================== */
+.nav-item-dropdown {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+}
+
+.nav-dropdown-trigger {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  cursor: pointer;
+}
+
+.dropdown-chevron {
+  transition: transform 0.25s ease;
+  display: inline-block;
+  stroke: currentColor;
+}
+
+.nav-item-dropdown:hover .dropdown-chevron,
+.nav-item-dropdown:focus-within .dropdown-chevron {
+  transform: rotate(180deg);
+}
+
+.nav-dropdown-menu {
+  position: absolute;
+  top: 100%;
+  left: -12px;
+  min-width: 210px;
+  background-color: #FFFFFF;
+  border-radius: 14px;
+  border: 1px solid #ECE7DF;
+  box-shadow: 0 14px 34px rgba(43, 37, 34, 0.12);
+  padding: 8px 0;
+  margin-top: 10px;
+  list-style: none;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(10px);
+  transition: opacity 0.2s ease, transform 0.2s ease, visibility 0.2s;
+  z-index: 1000;
+}
+
+.nav-dropdown-menu::before {
+  content: '';
+  position: absolute;
+  top: -14px;
+  left: 0;
+  right: 0;
+  height: 14px;
+}
+
+.nav-item-dropdown:hover .nav-dropdown-menu,
+.nav-item-dropdown:focus-within .nav-dropdown-menu {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+.dropdown-link {
+  display: block;
+  padding: 9px 18px;
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--color-text-dark, #2B2522);
+  text-decoration: none;
+  transition: background-color 0.15s ease, color 0.15s ease, padding-left 0.15s ease;
+}
+
+.dropdown-link:hover {
+  background-color: #FAF4F0;
+  color: var(--color-primary, #883023);
+  padding-left: 22px;
+}
+
+/* Mobile Submenu */
+.mobile-dropdown-item {
+  display: flex;
+  flex-direction: column;
+}
+
+.mobile-dropdown-toggle {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  background: none;
+  border: none;
+  cursor: pointer;
+  text-align: left;
+  font-family: inherit;
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--color-text-dark, #2B2522);
+  padding: 6px 0;
+}
+
+.mobile-dropdown-toggle .dropdown-chevron {
+  transition: transform 0.25s ease;
+}
+
+.mobile-dropdown-item.is-expanded .mobile-dropdown-toggle .dropdown-chevron {
+  transform: rotate(180deg);
+}
+
+.mobile-submenu {
+  list-style: none;
+  padding: 6px 0 6px 14px;
+  display: none;
+  flex-direction: column;
+  gap: 8px;
+  border-left: 2px solid #ECE7DF;
+  margin: 6px 0 8px 4px;
+}
+
+.mobile-dropdown-item.is-expanded .mobile-submenu {
+  display: flex;
+}
+
+.mobile-sublink {
+  font-size: 14.5px;
+  font-weight: 500;
+  color: #5C5652;
+  text-decoration: none;
+  padding: 4px 0;
+  display: block;
+}
+
+.mobile-sublink:hover {
+  color: var(--color-primary, #883023);
 }
 
 .header-actions-group {
@@ -3082,6 +3224,356 @@ button:focus-visible {
     gap: 14px;
   }
 }
+
+/* ========================================================
+   MODAL / POP-UP ORDINA ORA
+   ======================================================== */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(22, 14, 10, 0.72);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  z-index: 100000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.28s ease, visibility 0.28s ease;
+}
+
+.modal-overlay.is-open {
+  opacity: 1;
+  visibility: visible;
+}
+
+.order-modal-card {
+  position: relative;
+  background: #FFFFFF;
+  border-radius: 24px;
+  width: 100%;
+  max-width: 500px;
+  max-height: 90vh;
+  overflow-y: auto;
+  box-shadow: 0 24px 60px rgba(0, 0, 0, 0.28), 0 4px 16px rgba(0, 0, 0, 0.08);
+  padding: 34px 30px 28px;
+  transform: translateY(18px) scale(0.97);
+  transition: transform 0.28s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.modal-overlay.is-open .order-modal-card {
+  transform: translateY(0) scale(1);
+}
+
+.modal-close-btn {
+  position: absolute;
+  top: 18px;
+  right: 18px;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  border: none;
+  background: #F4EFEA;
+  color: #5C5652;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: background 0.2s ease, color 0.2s ease, transform 0.15s ease;
+  z-index: 2;
+}
+
+.modal-close-btn:hover {
+  background: #E8DFD7;
+  color: #2B2522;
+  transform: rotate(90deg);
+}
+
+.modal-product-summary {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  background: #FAF8F5;
+  border: 1px solid #ECE7DF;
+  border-radius: 16px;
+  padding: 14px 16px;
+  margin-bottom: 20px;
+}
+
+.modal-product-thumb {
+  width: 76px;
+  height: 76px;
+  object-fit: contain;
+  flex-shrink: 0;
+  border-radius: 10px;
+  background: #FFFFFF;
+  padding: 4px;
+}
+
+.modal-product-details {
+  flex: 1;
+}
+
+.modal-promo-tag {
+  display: inline-block;
+  background: #EAF3E7;
+  color: #4D7D39;
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  padding: 2px 8px;
+  border-radius: 999px;
+  margin-bottom: 4px;
+}
+
+.modal-prod-title {
+  font-size: 17px;
+  font-weight: 800;
+  color: #2B2522;
+  line-height: 1.2;
+  margin-bottom: 4px;
+}
+
+.modal-price-box {
+  display: flex;
+  align-items: baseline;
+  gap: 8px;
+}
+
+.modal-price-now {
+  font-size: 20px;
+  font-weight: 800;
+  color: #883023;
+}
+
+.modal-price-was {
+  font-size: 14px;
+  color: #8E8883;
+  text-decoration: line-through;
+}
+
+.modal-header-text {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.modal-main-title {
+  font-size: 20px;
+  font-weight: 800;
+  color: #2B2522;
+  margin-bottom: 6px;
+}
+
+.modal-sub-title {
+  font-size: 13.5px;
+  color: #5C5652;
+  line-height: 1.45;
+}
+
+.modal-form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.modal-field {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  text-align: left;
+}
+
+.modal-label {
+  font-size: 13px;
+  font-weight: 700;
+  color: #2B2522;
+}
+
+.modal-input-wrap {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.modal-input-icon {
+  position: absolute;
+  left: 14px;
+  color: #8E8883;
+  pointer-events: none;
+  display: flex;
+  align-items: center;
+}
+
+.modal-input {
+  width: 100%;
+  height: 48px;
+  border: 1.5px solid #DDD6CD;
+  border-radius: 12px;
+  padding: 0 14px 0 42px;
+  font-size: 15px;
+  font-family: inherit;
+  color: #2B2522;
+  background: #FFFFFF;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+  box-sizing: border-box;
+}
+
+.modal-input:focus {
+  outline: none;
+  border-color: #883023;
+  box-shadow: 0 0 0 3px rgba(136, 48, 35, 0.15);
+}
+
+.modal-field-hint {
+  font-size: 11.5px;
+  color: #8E8883;
+  margin-top: 2px;
+}
+
+.btn-modal-cta {
+  width: 100%;
+  height: 52px;
+  border: none;
+  border-radius: 14px;
+  background-color: #883023;
+  color: #FFFFFF;
+  font-size: 16px;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  cursor: pointer;
+  box-shadow: 0 6px 18px rgba(136, 48, 35, 0.32);
+  transition: background 0.2s ease, transform 0.15s ease, box-shadow 0.2s ease;
+  margin-top: 6px;
+}
+
+.btn-modal-cta:hover {
+  background-color: #70261A;
+  transform: translateY(-1px);
+  box-shadow: 0 8px 22px rgba(136, 48, 35, 0.4);
+}
+
+.btn-modal-cta:active {
+  transform: translateY(1px);
+}
+
+.modal-protection-note {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 7px;
+  font-size: 12.5px;
+  color: #4D7D39;
+  font-weight: 600;
+  margin-top: 10px;
+}
+
+.modal-badges-row {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  margin-top: 14px;
+  padding-top: 14px;
+  border-top: 1px solid #ECE7DF;
+  flex-wrap: wrap;
+}
+
+.modal-badge-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 11.5px;
+  color: #5C5652;
+}
+
+/* Success State */
+.modal-success-box {
+  text-align: center;
+  padding: 10px 0;
+}
+
+.modal-success-icon {
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  background: #EAF3E7;
+  color: #4D7D39;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 16px;
+}
+
+.modal-success-title {
+  font-size: 22px;
+  font-weight: 800;
+  color: #2B2522;
+  margin-bottom: 10px;
+}
+
+.modal-success-desc {
+  font-size: 14.5px;
+  color: #5C5652;
+  line-height: 1.55;
+  margin-bottom: 20px;
+}
+
+.modal-success-lead-data {
+  background: #FAF8F5;
+  border: 1px solid #ECE7DF;
+  border-radius: 12px;
+  padding: 12px;
+  margin-bottom: 22px;
+  font-size: 13.5px;
+  color: #2B2522;
+  text-align: left;
+}
+
+.modal-success-lead-data p {
+  margin: 4px 0;
+}
+
+.btn-modal-success-close {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 12px 28px;
+  border-radius: 999px;
+  border: none;
+  background: #2B2522;
+  color: #FFFFFF;
+  font-size: 14px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+.btn-modal-success-close:hover {
+  background: #000000;
+}
+
+@media (max-width: 480px) {
+  .order-modal-card {
+    padding: 26px 20px 22px;
+    border-radius: 20px;
+  }
+  .modal-main-title {
+    font-size: 18px;
+  }
+  .btn-modal-cta {
+    font-size: 15px;
+    height: 50px;
+  }
+}
 </style>
 
   <!-- Schema.org JSON-LD (SEO per Italia: Organizzazione, Prodotto, Breadcrumb & Offerta) -->
@@ -3094,7 +3586,7 @@ button:focus-visible {
         "@id": "https://offertesalute.it/#organization",
         "name": "Offerte Salute",
         "url": "https://offertesalute.it/",
-        "logo": "https://offertesalute.it/assets/slimmatica-hero.webp",
+        "logo": "https://offertesalute.it/assets/images/slimmatica-hero.webp",
         "description": "Portale dedicato al benessere e alla salute con integratori alimentari naturali in Italia.",
         "areaServed": "IT"
       },
@@ -3130,7 +3622,7 @@ button:focus-visible {
         "@type": "Product",
         "@id": "https://offertesalute.it/slimmatica#product",
         "name": "Slimmatica",
-        "image": "https://offertesalute.it/assets/slimmatica-hero.webp",
+        "image": "https://offertesalute.it/assets/images/slimmatica-hero.webp",
         "description": "Formula innovativa con ingredienti naturali, studiata per supportare il metabolismo, ridurre l’appetito e favorire la combustione dei grassi.",
         "brand": {
           "@type": "Brand",
@@ -3139,7 +3631,7 @@ button:focus-visible {
         "category": "Integratore alimentare",
         "offers": {
           "@type": "Offer",
-          "price": "39.00",
+          "price": "29.00",
           "priceCurrency": "EUR",
           "priceValidUntil": "2026-12-31",
           "availability": "https://schema.org/InStock",
@@ -3226,14 +3718,6 @@ button:focus-visible {
           },
           {
             "@type": "Question",
-            "name": "La spedizione è gratuita in Italia?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "Sì, secondo le condizioni dell’offerta mostrata nella pagina, la spedizione in Italia è gratuita. Verifica sempre le condizioni applicabili al momento dell’ordine."
-            }
-          },
-          {
-            "@type": "Question",
             "name": "Posso assumere Slimmatica insieme ad altri integratori?",
             "acceptedAnswer": {
               "@type": "Answer",
@@ -3247,6 +3731,10 @@ button:focus-visible {
   </script>
 </head>
 <body>
+  <!-- Google Tag Manager (noscript) -->
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TFLLMZCB"
+  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+  <!-- End Google Tag Manager (noscript) -->
 
   <!-- ========================================================
        HEADER + MENU DI NAVIGAZIONE
@@ -3274,6 +3762,22 @@ button:focus-visible {
       <nav class="main-navigation" aria-label="Navigazione principale">
         <ul class="nav-links-list">
           <li><a href="#recensioni" class="nav-anchor">Recensioni</a></li>
+          <li class="nav-item-dropdown">
+            <a href="#prodotti" class="nav-anchor nav-dropdown-trigger" aria-haspopup="true" aria-expanded="false">
+              <span>Prodotti</span>
+              <svg class="dropdown-chevron" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                <polyline points="6 9 12 15 18 9"></polyline>
+              </svg>
+            </a>
+            <ul class="nav-dropdown-menu">
+              <li><a href="/slimmatica/" class="dropdown-link">Slimmatica</a></li>
+              <li><a href="/adenofrin/" class="dropdown-link">Adenofrin</a></li>
+              <li><a href="/balansulin/" class="dropdown-link">Balansulin</a></li>
+              <li><a href="/uroprostan/" class="dropdown-link">Uroprostan</a></li>
+              <li><a href="/glucortex/" class="dropdown-link">Glucortex</a></li>
+              <li><a href="/artizynt/" class="dropdown-link">ArtiZynt</a></li>
+            </ul>
+          </li>
           <li><a href="#ingredienti" class="nav-anchor">Ingredienti</a></li>
           <li><a href="#come-funziona" class="nav-anchor">Come funziona</a></li>
           <li><a href="#faq" class="nav-anchor">FAQ</a></li>
@@ -3282,11 +3786,6 @@ button:focus-visible {
 
       <!-- LATO DESTRO: PULSANTE CTA & TOGGLE MOBILE -->
       <div class="header-actions-group">
-        <a href="#ordina" class="btn-header-cta" id="headerCtaBtn">
-          <span>Ordina ora</span>
-          <span class="cta-arrow-symbol" aria-hidden="true">→</span>
-        </a>
-
         <button class="mobile-nav-toggle" id="mobileNavToggle" aria-label="Apri menu di navigazione" aria-expanded="false" aria-controls="mobileMenuDrawer">
           <span class="hamburger-line"></span>
           <span class="hamburger-line"></span>
@@ -3300,16 +3799,26 @@ button:focus-visible {
     <div class="mobile-menu-drawer" id="mobileMenuDrawer" hidden>
       <ul class="mobile-links-list">
         <li><a href="#recensioni" class="mobile-anchor">Recensioni</a></li>
+        <li class="mobile-dropdown-item">
+          <button class="mobile-anchor mobile-dropdown-toggle" type="button" aria-expanded="false">
+            <span>Prodotti</span>
+            <svg class="dropdown-chevron" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+              <polyline points="6 9 12 15 18 9"></polyline>
+            </svg>
+          </button>
+          <ul class="mobile-submenu">
+            <li><a href="/slimmatica/" class="mobile-sublink">Slimmatica</a></li>
+            <li><a href="/adenofrin/" class="mobile-sublink">Adenofrin</a></li>
+            <li><a href="/balansulin/" class="mobile-sublink">Balansulin</a></li>
+            <li><a href="/uroprostan/" class="mobile-sublink">Uroprostan</a></li>
+            <li><a href="/glucortex/" class="mobile-sublink">Glucortex</a></li>
+            <li><a href="/artizynt/" class="mobile-sublink">ArtiZynt</a></li>
+          </ul>
+        </li>
         <li><a href="#ingredienti" class="mobile-anchor">Ingredienti</a></li>
         <li><a href="#come-funziona" class="mobile-anchor">Come funziona</a></li>
         <li><a href="#faq" class="mobile-anchor">FAQ</a></li>
       </ul>
-      <div class="mobile-drawer-action">
-        <a href="#ordina" class="btn-header-cta mobile-btn-cta">
-          <span>Ordina ora</span>
-          <span class="cta-arrow-symbol" aria-hidden="true">→</span>
-        </a>
-      </div>
     </div>
   </header>
 
@@ -3395,7 +3904,7 @@ button:focus-visible {
         <div class="hero-col-center">
           <div class="product-visual-wrapper">
             <img 
-              src="assets/slimmatica-hero.webp" 
+              src="assets/images/slimmatica-hero.webp" 
               alt="Slimmatica integratore alimentare con confezione e flacone" 
               class="product-hero-img"
               width="480" 
@@ -3412,8 +3921,8 @@ button:focus-visible {
             <span class="offer-tag">Solo oggi</span>
 
             <div class="offer-price-row">
-              <span class="price-current">€ 39,00</span>
-              <span class="price-old">€ 59,00</span>
+              <span class="price-current">€ 29,00</span>
+              <span class="price-old">€ 58,00</span>
             </div>
 
             <!-- Botão CTA da Oferta com link real -->
@@ -3443,7 +3952,7 @@ button:focus-visible {
             <!-- Selo de Envio Gratuito na Itália -->
             <p class="shipping-notice">
               <span class="shipping-check" aria-hidden="true">✓</span>
-              <span class="shipping-text">Spedizione gratuita in Italia</span>
+              <span class="shipping-text">Spedizione in Italia</span>
             </p>
 
           </div>
@@ -3470,7 +3979,7 @@ button:focus-visible {
           <!-- 1. ÁREA ESQUERDA — IMAGEM / DOCUMENTO -->
           <div class="specialist-doc-wrapper">
             <img 
-              src="assets/specialista.webp" 
+              src="assets/images/specialista.webp" 
               alt="Specialista nutrizionista in camice bianco con una mela in mano" 
               class="specialist-doc-img"
               width="900" 
@@ -3483,8 +3992,8 @@ button:focus-visible {
           <!-- 2. ÁREA CENTRAL — ESPECIALISTA & DEPOIMENTO -->
           <div class="specialist-profile-col">
             <div class="specialist-identity">
-              <h3 class="specialist-name">Dott.ssa Maria Bianchi</h3>
-              <p class="specialist-profession">Biologa Nutrizionista</p>
+              <h3 class="specialist-name">Dott. Marco Bianchi</h3>
+              <p class="specialist-profession">Biologo Nutrizionista</p>
             </div>
 
             <blockquote class="specialist-quote">
@@ -3498,7 +4007,7 @@ button:focus-visible {
                   <polyline points="20 6 9 17 4 12"/>
                 </svg>
               </span>
-              <span class="credential-text">Iscritta all’Ordine dei Biologi – Italia</span>
+              <span class="credential-text">Iscritto all’Ordine dei Biologi – Italia</span>
             </div>
           </div>
 
@@ -3514,7 +4023,7 @@ button:focus-visible {
                 </svg>
               </div>
               <div class="authority-text-group">
-                <p class="authority-title">Esperta in nutrizione</p>
+                <p class="authority-title">Esperto in nutrizione</p>
                 <p class="authority-sub">e benessere</p>
               </div>
             </div>
@@ -3575,7 +4084,7 @@ button:focus-visible {
           <article class="ingredient-card">
             <div class="ingredient-img-wrapper">
               <img 
-                src="assets/the-verde.webp" 
+                src="assets/images/the-verde.webp" 
                 alt="Thè verde utilizzato nella formulazione di Slimmatica" 
                 class="ingredient-img"
                 width="120" 
@@ -3591,7 +4100,7 @@ button:focus-visible {
           <article class="ingredient-card">
             <div class="ingredient-img-wrapper">
               <img 
-                src="assets/konjac.webp" 
+                src="assets/images/konjac.webp" 
                 alt="Konjac utilizzato nella formulazione di Slimmatica" 
                 class="ingredient-img"
                 width="120" 
@@ -3607,7 +4116,7 @@ button:focus-visible {
           <article class="ingredient-card">
             <div class="ingredient-img-wrapper">
               <img 
-                src="assets/garcinia-cambogia.webp" 
+                src="assets/images/garcinia-cambogia.webp" 
                 alt="Garcinia Cambogia presente nella formulazione di Slimmatica" 
                 class="ingredient-img"
                 width="120" 
@@ -3623,7 +4132,7 @@ button:focus-visible {
           <article class="ingredient-card">
             <div class="ingredient-img-wrapper">
               <img 
-                src="assets/guarana.webp" 
+                src="assets/images/guarana.webp" 
                 alt="Guaranà utilizzato nella formulazione di Slimmatica" 
                 class="ingredient-img"
                 width="120" 
@@ -3639,7 +4148,7 @@ button:focus-visible {
           <article class="ingredient-card">
             <div class="ingredient-img-wrapper">
               <img 
-                src="assets/vitamine-minerali.webp" 
+                src="assets/images/vitamine-minerali.webp" 
                 alt="Vitamine e minerali presenti nella formulazione di Slimmatica" 
                 class="ingredient-img"
                 width="120" 
@@ -3768,7 +4277,7 @@ button:focus-visible {
                 <th class="col-product col-slimmatica-head" scope="col">
                   <div class="product-th-content">
                     <img 
-                      src="assets/slimmatica-hero.webp" 
+                      src="assets/images/slimmatica-hero.webp" 
                       alt="Slimmatica" 
                       class="table-prod-img table-slimmatica-img" 
                       width="50" 
@@ -3783,7 +4292,7 @@ button:focus-visible {
                 <th class="col-product" scope="col">
                   <div class="product-th-content">
                     <img 
-                      src="assets/competitor-bottle.webp" 
+                      src="assets/images/competitor-bottle.webp" 
                       alt="Prodotto A" 
                       class="table-prod-img" 
                       width="38" 
@@ -3798,7 +4307,7 @@ button:focus-visible {
                 <th class="col-product" scope="col">
                   <div class="product-th-content">
                     <img 
-                      src="assets/competitor-bottle.webp" 
+                      src="assets/images/competitor-bottle.webp" 
                       alt="Prodotto B" 
                       class="table-prod-img" 
                       width="38" 
@@ -3813,7 +4322,7 @@ button:focus-visible {
                 <th class="col-product" scope="col">
                   <div class="product-th-content">
                     <img 
-                      src="assets/competitor-bottle.webp" 
+                      src="assets/images/competitor-bottle.webp" 
                       alt="Prodotto C" 
                       class="table-prod-img" 
                       width="38" 
@@ -3966,7 +4475,7 @@ button:focus-visible {
               <tr class="row-price">
                 <th class="row-feature-title" scope="row">Prezzo</th>
                 <td class="cell-price col-slimmatica">
-                  <span class="price-val price-highlight">€ 39,00</span>
+                  <span class="price-val price-highlight">€ 29,00</span>
                   <div class="best-choice-badge">
                     <span class="badge-full">La scelta migliore</span>
                     <span class="badge-short">Migliore</span>
@@ -4001,7 +4510,7 @@ button:focus-visible {
           <!-- Area Sinistra: Silhouette Femminile -->
           <div class="agisce-visual">
             <img 
-              src="assets/silhueta-agisce.webp" 
+              src="assets/images/silhueta-agisce.webp" 
               alt="Illustrazione del corpo femminile e dell'azione di Slimmatica sul metabolismo" 
               class="agisce-img" 
               width="485" 
@@ -4097,7 +4606,7 @@ button:focus-visible {
           <!-- Colonna Prodotto (Sinistra) -->
           <div class="promo-banner-product">
             <img 
-              src="assets/slimmatica-hero.webp" 
+              src="assets/images/slimmatica-hero.webp" 
               alt="Slimmatica integratore alimentare per il metabolismo" 
               class="promo-product-img" 
               width="220" 
@@ -4113,8 +4622,8 @@ button:focus-visible {
 
             <div class="promo-banner-pricing">
               <span class="promo-price-badge">Solo oggi</span>
-              <span class="promo-price-current">€ 39,00</span>
-              <del class="promo-price-old">€69,00</del>
+              <span class="promo-price-current">€ 29,00</span>
+              <del class="promo-price-old">€ 58,00</del>
             </div>
 
             <div class="promo-banner-trust">
@@ -4123,7 +4632,7 @@ button:focus-visible {
                   <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/>
                   <polyline points="9 22 9 12 15 12 15 22"/>
                 </svg>
-                <span>Spedizione gratuita in Italia</span>
+                <span>Spedizione in Italia</span>
               </div>
               <div class="promo-trust-item">
                 <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#3D7847" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
@@ -4137,7 +4646,7 @@ button:focus-visible {
 
           <!-- Colonna Azione & Social Proof (Destra) -->
           <div class="promo-banner-action">
-            <a href="#ordina" class="btn-promo-cta" aria-label="Ordina ora Slimmatica a 39 euro">
+            <a href="#ordina" class="btn-promo-cta" aria-label="Ordina ora Slimmatica a 29 euro">
               <span>Ordina ora</span>
               <span class="cta-arrow" aria-hidden="true">→</span>
             </a>
@@ -4178,7 +4687,7 @@ button:focus-visible {
               <article class="review-card">
                 <div class="review-card-header">
                   <img 
-                    src="assets/reviewer-giulia.webp" 
+                    src="assets/images/reviewer-giulia.webp" 
                     alt="Foto del profilo di Giulia R." 
                     class="reviewer-avatar" 
                     width="44" 
@@ -4218,7 +4727,7 @@ button:focus-visible {
               <article class="review-card">
                 <div class="review-card-header">
                   <img 
-                    src="assets/reviewer-federica.webp" 
+                    src="assets/images/reviewer-federica.webp" 
                     alt="Foto del profilo di Federica M." 
                     class="reviewer-avatar" 
                     width="44" 
@@ -4258,7 +4767,7 @@ button:focus-visible {
               <article class="review-card">
                 <div class="review-card-header">
                   <img 
-                    src="assets/reviewer-valentina.webp" 
+                    src="assets/images/reviewer-valentina.webp" 
                     alt="Foto del profilo di Valentina S." 
                     class="reviewer-avatar" 
                     width="44" 
@@ -4298,7 +4807,7 @@ button:focus-visible {
               <article class="review-card">
                 <div class="review-card-header">
                   <img 
-                    src="assets/reviewer-laura.webp" 
+                    src="assets/images/reviewer-laura.webp" 
                     alt="Foto del profilo di Laura P." 
                     class="reviewer-avatar" 
                     width="44" 
@@ -4372,12 +4881,12 @@ button:focus-visible {
         <!-- Grade de 4 Cards de Produtos -->
         <div class="related-products-grid">
 
-          <!-- Card 1: ULTRAXAL -->
+          <!-- Card 1: Nano Slim -->
           <article class="related-product-card">
             <div class="related-product-img-wrap">
               <img 
-                src="assets/prod-ultraxal.webp" 
-                alt="Integratore alimentare Ultraxal" 
+                src="assets/images/prod-nanoslim.webp" 
+                alt="Nano Slim integratore naturale per il dimagrimento" 
                 class="related-product-img" 
                 width="200" 
                 height="135"
@@ -4385,26 +4894,26 @@ button:focus-visible {
               >
             </div>
             <div class="related-product-body">
-              <h3 class="related-product-name">ULTRAXAL</h3>
-              <p class="related-product-category">Gastro Support</p>
-              <p class="related-product-desc">Per la digestione e disturbi intestinali</p>
+              <h3 class="related-product-name">Nano Slim</h3>
+              <p class="related-product-category">Dimagrimento & Metabolismo</p>
+              <p class="related-product-desc">Nano Slim è un integratore naturale al gusto di cocco che aiuta nel processo di dimagrimento e nell’attivazione del metabolismo.</p>
               <div class="related-product-pricing">
-                <span class="related-price-current">€ 29,90</span>
-                <del class="related-price-old">€ 49,90</del>
+                <span class="related-price-current">€ 39,00</span>
+                <del class="related-price-old">€ 78,00</del>
               </div>
-              <a href="#ordina-ultraxal" class="btn-product-card" aria-label="Visita prodotto Ultraxal">
-                <span>Visita prodotto</span>
+              <a href="https://kshop5.pro/rZ5M8J/" class="btn-product-card" target="_blank" rel="noopener noreferrer" aria-label="Ordina Nano Slim">
+                <span>Ordina ora</span>
                 <span class="cta-arrow" aria-hidden="true">→</span>
               </a>
             </div>
           </article>
 
-          <!-- Card 2: AdipoFree -->
+          <!-- Card 2: Artronol -->
           <article class="related-product-card">
             <div class="related-product-img-wrap">
               <img 
-                src="assets/prod-adipofree.webp" 
-                alt="Integratore alimentare AdipoFree" 
+                src="assets/images/prod-artronol.webp" 
+                alt="Artronol integratore in capsule per articolazioni" 
                 class="related-product-img" 
                 width="200" 
                 height="135"
@@ -4412,26 +4921,26 @@ button:focus-visible {
               >
             </div>
             <div class="related-product-body">
-              <h3 class="related-product-name">AdipoFree</h3>
-              <p class="related-product-category">Controllo del peso.</p>
-              <p class="related-product-desc">Supporto mirato per la gestione del peso e l'equilibrio lipidico</p>
+              <h3 class="related-product-name">Artronol</h3>
+              <p class="related-product-category">Salute articolare & Mobilità</p>
+              <p class="related-product-desc">Integratore in capsule per alleviare dolori, infiammazioni e rigidità articolare, oltre a favorire la mobilità.</p>
               <div class="related-product-pricing">
-                <span class="related-price-current">€ 34,90</span>
-                <del class="related-price-old">€ 49,90</del>
+                <span class="related-price-current">€ 39,00</span>
+                <del class="related-price-old">€ 78,00</del>
               </div>
-              <a href="#ordina-adipofree" class="btn-product-card" aria-label="Visita prodotto AdipoFree">
-                <span>Visita prodotto</span>
+              <a href="https://kshop5.pro/usgkk5/" class="btn-product-card" target="_blank" rel="noopener noreferrer" aria-label="Ordina Artronol">
+                <span>Ordina ora</span>
                 <span class="cta-arrow" aria-hidden="true">→</span>
               </a>
             </div>
           </article>
 
-          <!-- Card 3: VitaPlus -->
+          <!-- Card 3: CYSTINORM -->
           <article class="related-product-card">
             <div class="related-product-img-wrap">
               <img 
-                src="assets/prod-vitaplus.webp" 
-                alt="Integratore alimentare VitaPlus" 
+                src="assets/images/prod-cystinorm.webp" 
+                alt="CYSTINORM integratore a base di piante per le vie urinarie" 
                 class="related-product-img" 
                 width="200" 
                 height="135"
@@ -4439,26 +4948,26 @@ button:focus-visible {
               >
             </div>
             <div class="related-product-body">
-              <h3 class="related-product-name">VitaPlus</h3>
-              <p class="related-product-category">Energia e vitalità.</p>
-              <p class="related-product-desc">Formula tonica multivitaminica contro stanchezza e spossatezza</p>
+              <h3 class="related-product-name">CYSTINORM</h3>
+              <p class="related-product-category">Vie urinarie & Benessere</p>
+              <p class="related-product-desc">Integratore in capsule a base di piante, destinato ad alleviare i sintomi associati alla cistite, come dolore, bruciore, infiammazione e minzione frequente.</p>
               <div class="related-product-pricing">
-                <span class="related-price-current">€ 29,90</span>
-                <del class="related-price-old">€ 49,90</del>
+                <span class="related-price-current">€ 39,00</span>
+                <del class="related-price-old">€ 78,00</del>
               </div>
-              <a href="#ordina-vitaplus" class="btn-product-card" aria-label="Visita prodotto VitaPlus">
-                <span>Visita prodotto</span>
+              <a href="https://kshop5.pro/enEv5e/" class="btn-product-card" target="_blank" rel="noopener noreferrer" aria-label="Ordina CYSTINORM">
+                <span>Ordina ora</span>
                 <span class="cta-arrow" aria-hidden="true">→</span>
               </a>
             </div>
           </article>
 
-          <!-- Card 4: DetosSlim -->
+          <!-- Card 4: Idealfit -->
           <article class="related-product-card">
             <div class="related-product-img-wrap">
               <img 
-                src="assets/prod-detosslim.webp" 
-                alt="Integratore alimentare DetosSlim" 
+                src="assets/images/prod-idealfit.webp" 
+                alt="Idealfit integratore in gocce per il dimagrimento" 
                 class="related-product-img" 
                 width="200" 
                 height="135"
@@ -4466,15 +4975,15 @@ button:focus-visible {
               >
             </div>
             <div class="related-product-body">
-              <h3 class="related-product-name">DetosSlim</h3>
-              <p class="related-product-category">Depurazione e leggerezza.</p>
-              <p class="related-product-desc">Drenante naturale per l'eliminazione delle tossine e dei liquidi in eccesso</p>
+              <h3 class="related-product-name">Idealfit</h3>
+              <p class="related-product-category">Gocce dimagranti & Metabolismo</p>
+              <p class="related-product-desc">Integratore in gocce che favorisce il dimagrimento, aiutando a ridurre l’appetito, bruciare i grassi e regolare il metabolismo.</p>
               <div class="related-product-pricing">
-                <span class="related-price-current">€ 27,90</span>
-                <del class="related-price-old">€ 44,90</del>
+                <span class="related-price-current">€ 39,00</span>
+                <del class="related-price-old">€ 78,00</del>
               </div>
-              <a href="#ordina-detosslim" class="btn-product-card" aria-label="Visita prodotto DetosSlim">
-                <span>Visita prodotto</span>
+              <a href="https://kshop5.pro/ZFOsiB/" class="btn-product-card" target="_blank" rel="noopener noreferrer" aria-label="Ordina Idealfit">
+                <span>Ordina ora</span>
                 <span class="cta-arrow" aria-hidden="true">→</span>
               </a>
             </div>
@@ -4497,7 +5006,7 @@ button:focus-visible {
           <div class="faq-visual-col">
             <div class="faq-product-sticky">
               <img 
-                src="assets/slimmatica-hero.webp" 
+                src="assets/images/slimmatica-hero.webp" 
                 alt="Confezione e flacone integratore naturale Slimmatica per il metabolismo" 
                 class="faq-product-img" 
                 width="400" 
@@ -4692,40 +5201,6 @@ button:focus-visible {
                 </div>
               </div>
 
-              <!-- Item 6 -->
-              <div class="faq-item">
-                <h3 class="faq-question-heading">
-                  <button 
-                    type="button" 
-                    class="faq-trigger" 
-                    id="faqBtn6" 
-                    aria-expanded="false" 
-                    aria-controls="faqPanel6"
-                  >
-                    <span class="faq-question-text">La spedizione è gratuita in Italia?</span>
-                    <span class="faq-icon" aria-hidden="true">
-                      <svg class="icon-plus" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
-                        <line x1="12" y1="5" x2="12" y2="19"></line>
-                        <line x1="5" y1="12" x2="19" y2="12"></line>
-                      </svg>
-                      <svg class="icon-minus" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
-                        <line x1="5" y1="12" x2="19" y2="12"></line>
-                      </svg>
-                    </span>
-                  </button>
-                </h3>
-                <div 
-                  class="faq-panel" 
-                  id="faqPanel6" 
-                  role="region" 
-                  aria-labelledby="faqBtn6" 
-                  hidden
-                >
-                  <div class="faq-answer-inner">
-                    <p>Sì, secondo le condizioni dell’offerta mostrata nella pagina, la spedizione in Italia è gratuita. Verifica sempre le condizioni applicabili al momento dell’ordine.</p>
-                  </div>
-                </div>
-              </div>
 
               <!-- Item 7 -->
               <div class="faq-item">
@@ -4811,16 +5286,16 @@ button:focus-visible {
           </ul>
         </nav>
 
-        <!-- Colonna 3: Informazioni Legali e Assistenza -->
+        <!-- Colonna 3: Prodotti -->
         <div class="footer-info-col">
-          <h2 class="footer-col-title">Informazioni</h2>
+          <h2 class="footer-col-title">Prodotti</h2>
           <ul class="footer-links-list">
-            <li><a href="#contatti" class="footer-link">Contatti</a></li>
-            <li><a href="#privacy" class="footer-link">Privacy Policy</a></li>
-            <li><a href="#cookie" class="footer-link">Cookie Policy</a></li>
-            <li><a href="#termini" class="footer-link">Termini e Condizioni</a></li>
-            <li><a href="#spedizioni" class="footer-link">Spedizioni</a></li>
-            <li><a href="#pagamenti" class="footer-link">Pagamenti</a></li>
+            <li><a href="/slimmatica" class="footer-link">Slimmatica</a></li>
+            <li><a href="/adenofrin" class="footer-link">Adenofrin</a></li>
+            <li><a href="/balansulin" class="footer-link">Balansulin</a></li>
+            <li><a href="/uroprostan" class="footer-link">Uroprostan</a></li>
+            <li><a href="/glucortex" class="footer-link">Glucortex</a></li>
+            <li><a href="/artizynt" class="footer-link">ArtiZynt</a></li>
           </ul>
         </div>
 
@@ -4846,7 +5321,7 @@ button:focus-visible {
                   <circle cx="18.5" cy="18.5" r="2.5"></circle>
                 </svg>
               </span>
-              <span>Spedizione gratuita in Italia</span>
+              <span>Spedizione in Italia</span>
             </div>
             <div class="footer-trust-item">
               <span class="footer-trust-icon" aria-hidden="true">
@@ -4888,13 +5363,241 @@ button:focus-visible {
     </div>
   </footer>
 
+  <!-- ========================================================
+       POP-UP / MODALE ORDINA ORA (ALTA CONVERSIONE)
+       ======================================================== -->
+  <div class="modal-overlay" id="orderModal" aria-hidden="true" role="dialog" aria-modal="true" aria-labelledby="orderModalTitle">
+    <div class="order-modal-card">
+      <button type="button" class="modal-close-btn" id="modalCloseBtn" aria-label="Chiudi finestra d'ordine">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+          <line x1="18" y1="6" x2="6" y2="18"></line>
+          <line x1="6" y1="6" x2="18" y2="18"></line>
+        </svg>
+      </button>
+
+      <!-- Stato Iniziale: Modulo di Ordine -->
+      <div id="modalOrderBody">
+        <div class="modal-header-text">
+          <h3 class="modal-main-title" id="orderModalTitle">Completa il tuo ordine</h3>
+          <p class="modal-sub-title">Nessun pagamento anticipato. Pagherai comodamente in contanti alla consegna.</p>
+        </div>
+
+        <!-- Box Riassunto Prodotto -->
+        <div class="modal-product-summary">
+          <img src="assets/images/slimmatica-hero.webp" alt="Confezione Slimmatica" class="modal-product-thumb" width="76" height="76">
+          <div class="modal-product-details">
+            <span class="modal-promo-tag">Solo oggi - Sconto 50%</span>
+            <div class="modal-prod-title">Slimmatica</div>
+            <div class="modal-price-box">
+              <span class="modal-price-now">€ 29,00</span>
+              <del class="modal-price-was">€ 58,00</del>
+            </div>
+          </div>
+        </div>
+
+        <!-- Formulario per Lead -->
+        <form method="POST" action="/slimmatica/slimmatica.php" id="orderLeadForm" class="modal-form">
+          <input type="hidden" name="country" value="IT">
+          <input type="hidden" name="lang" value="IT">
+          <input type="hidden" name="offer_id" value="15495">
+          <!-- Nome e Cognome -->
+          <div class="modal-field">
+            <label for="orderLeadName" class="modal-label">Nome e Cognome *</label>
+            <div class="modal-input-wrap">
+              <span class="modal-input-icon" aria-hidden="true">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+                  <circle cx="12" cy="7" r="4"></circle>
+                </svg>
+              </span>
+              <input 
+                type="text" 
+                id="orderLeadName" 
+                name="name" 
+                class="modal-input" 
+                placeholder="Es. Marco Rossi" 
+                required 
+                autocomplete="name"
+              >
+            </div>
+          </div>
+
+          <!-- Numero di Telefono -->
+          <div class="modal-field">
+            <label for="orderLeadPhone" class="modal-label">Numero di Telefono *</label>
+            <div class="modal-input-wrap">
+              <span class="modal-input-icon" aria-hidden="true">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+                </svg>
+              </span>
+              <input 
+                type="tel" 
+                id="orderLeadPhone" 
+                name="phone" 
+                class="modal-input" 
+                placeholder="Es. +39 340 1234567" 
+                required 
+                autocomplete="tel"
+              >
+            </div>
+            <span class="modal-field-hint">Necessario per la conferma telefonica da parte dell'operatore.</span>
+          </div>
+
+          <!-- Bottone CTA con feedback -->
+          <button type="submit" class="btn-modal-cta" id="btnSubmitModalOrder">
+            <span>Ordina ora a € 29,00</span>
+            <span aria-hidden="true">→</span>
+          </button>
+
+          <!-- Legenda richiesta: seus dados estão protegidos -->
+          <div class="modal-protection-note">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect>
+              <path d="M7 11V7a5 5 0 0 1 10 0v4"></path>
+            </svg>
+            <span>I tuoi dati sono protetti e riservati</span>
+          </div>
+
+          <!-- Badges di sicurezza & pagamento -->
+          <div class="modal-badges-row">
+            <span class="modal-badge-chip">
+              <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="#4D7D39" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                <polyline points="20 6 9 17 4 12"></polyline>
+              </svg>
+              Spedizione in Italia
+            </span>
+            <span class="modal-badge-chip">
+              <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="#4D7D39" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                <polyline points="20 6 9 17 4 12"></polyline>
+              </svg>
+              Pagamento alla consegna
+            </span>
+          </div>
+        </form>
+      </div>
+
+      <!-- Stato Successo: Confermato -->
+      <div id="modalOrderSuccess" class="modal-success-box" hidden>
+        <div class="modal-success-icon" aria-hidden="true">
+          <svg width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+            <polyline points="20 6 9 17 4 12"></polyline>
+          </svg>
+        </div>
+        <h3 class="modal-success-title">Ordine Ricevuto!</h3>
+        <p class="modal-success-desc">
+          Grazie <strong id="leadConfirmedName"></strong>! La tua richiesta per <strong>Slimmatica</strong> a <strong>€ 29,00</strong> è stata registrata con successo.
+        </p>
+        <div class="modal-success-lead-data">
+          <p>📞 <strong>Prossimo passo:</strong> Un nostro consulente ti contatterà al numero <strong id="leadConfirmedPhone"></strong> per confermare l'indirizzo di spedizione.</p>
+          <p>🚚 <strong>Metodo:</strong> Pagamento in contanti direttamente al corriere.</p>
+        </div>
+        <button type="button" class="btn-modal-success-close" id="btnCloseSuccessModal">Ho capito, grazie!</button>
+      </div>
+    </div>
+  </div>
+
   <!-- Script Esterno Vanilla JS con cache busting -->
-  <script src="script.js?v=6"></script>
+  <script src="assets/js/script.js?v=7"></script>
   <script>
-    // Aggiornamento anno dinamico
+    // Inizializzazione immediata Pop-up Ordina Ora e Anno Copyright
     (function() {
       var y = document.getElementById('currentYear');
       if (y) y.textContent = new Date().getFullYear();
+
+      var modal = document.getElementById('orderModal');
+      var closeBtn = document.getElementById('modalCloseBtn');
+      var closeSuccessBtn = document.getElementById('btnCloseSuccessModal');
+      var form = document.getElementById('orderLeadForm');
+      var bodyBox = document.getElementById('modalOrderBody');
+      var successBox = document.getElementById('modalOrderSuccess');
+      var leadNameSpan = document.getElementById('leadConfirmedName');
+      var leadPhoneSpan = document.getElementById('leadConfirmedPhone');
+
+      function openModal() {
+        if (!modal) return;
+        modal.classList.add('is-open');
+        modal.setAttribute('aria-hidden', 'false');
+        document.body.style.overflow = 'hidden';
+
+        if (bodyBox) bodyBox.removeAttribute('hidden');
+        if (successBox) successBox.setAttribute('hidden', '');
+
+        var nameInput = document.getElementById('orderLeadName');
+        if (nameInput) {
+          setTimeout(function() { nameInput.focus(); }, 100);
+        }
+      }
+
+      function closeModal() {
+        if (!modal) return;
+        modal.classList.remove('is-open');
+        modal.setAttribute('aria-hidden', 'true');
+        document.body.style.overflow = '';
+      }
+
+      // Attiva su tutti i bottoni Ordina ora
+      var triggerSelectors = [
+        '#headerCtaBtn',
+        '.mobile-btn-cta',
+        '#heroCtaBtn',
+        '.btn-promo-cta',
+        'a[href="#ordina"]'
+      ];
+      var triggers = document.querySelectorAll(triggerSelectors.join(','));
+      triggers.forEach(function(btn) {
+        btn.addEventListener('click', function(e) {
+          e.preventDefault();
+          var drawer = document.getElementById('mobileMenuDrawer');
+          var toggleBtn = document.getElementById('mobileNavToggle');
+          if (drawer && drawer.classList.contains('is-open')) {
+            drawer.classList.remove('is-open');
+            drawer.setAttribute('hidden', '');
+            if (toggleBtn) {
+              toggleBtn.classList.remove('is-active');
+              toggleBtn.setAttribute('aria-expanded', 'false');
+            }
+          }
+          openModal();
+        });
+      });
+
+      if (closeBtn) closeBtn.addEventListener('click', closeModal);
+      if (closeSuccessBtn) closeSuccessBtn.addEventListener('click', closeModal);
+
+      if (modal) {
+        modal.addEventListener('click', function(e) {
+          if (e.target === modal) closeModal();
+        });
+      }
+
+      document.addEventListener('keydown', function(e) {
+        if (e.key === 'Escape' && modal && modal.classList.contains('is-open')) {
+          closeModal();
+        }
+      });
+
+      if (form) {
+        form.addEventListener('submit', function(e) {
+          var nameInput = document.getElementById('orderLeadName');
+          var phoneInput = document.getElementById('orderLeadPhone');
+          var nameVal = nameInput ? nameInput.value.trim() : '';
+          var phoneVal = phoneInput ? phoneInput.value.trim() : '';
+
+          if (!nameVal || !phoneVal) {
+            e.preventDefault();
+            alert('Per favore, inserisci nome e numero di telefono per procedere.');
+            return;
+          }
+
+          var submitBtn = document.getElementById('btnSubmitModalOrder');
+          if (submitBtn) {
+            submitBtn.disabled = true;
+            submitBtn.textContent = 'Invio in corso...';
+          }
+          // Invio POST eseguito regolarmente verso slimmatica.php
+        });
+      }
     })();
   </script>
 </body>
