@@ -1,0 +1,25 @@
+# Apache / LiteSpeed / Hostinger Configuration
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+    RewriteBase /
+
+    # Garante que requisições POST para slimmatica.php ou slimmatica/slimmatica.php não sejam bloqueadas
+    RewriteCond %{REQUEST_METHOD} POST
+    RewriteRule ^(slimmatica/)?slimmatica\.php$ $0 [L]
+</IfModule>
+
+# Permissões explícitas para execução de arquivos PHP e estáticos
+<FilesMatch "\.(php|html|css|js|webp|png|jpg|jpeg|svg|ico)$">
+    <IfModule mod_authz_core.c>
+        Require all granted
+    </IfModule>
+    <IfModule !mod_authz_core.c>
+        Order allow,deny
+        Allow from all
+    </IfModule>
+</FilesMatch>
+
+# Previne 403 por falta de índice de diretório
+Options -Indexes +FollowSymLinks
+DirectoryIndex index.html index.php
+

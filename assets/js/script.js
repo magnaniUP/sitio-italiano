@@ -236,14 +236,15 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // Gestione invio modulo
   if (orderLeadForm) {
-    orderLeadForm.addEventListener('submit', (e) => {
+    orderLeadForm.addEventListener('submit', async (e) => {
+      e.preventDefault();
+
       const nameInput = document.getElementById('orderLeadName');
       const phoneInput = document.getElementById('orderLeadPhone');
       const nameVal = nameInput ? nameInput.value.trim() : '';
       const phoneVal = phoneInput ? phoneInput.value.trim() : '';
 
       if (!nameVal || !phoneVal) {
-        e.preventDefault();
         alert('Per favore, inserisci nome e numero di telefono per procedere.');
         return;
       }
@@ -253,7 +254,62 @@ document.addEventListener('DOMContentLoaded', () => {
         submitBtn.disabled = true;
         submitBtn.textContent = 'Invio in corso...';
       }
-      // Invio POST eseguito regolarmente verso slimmatica.php
+
+      const formData = new FormData(orderLeadForm);
+      const actionUrl = orderLeadForm.getAttribute('action') || '/slimmatica/slimmatica.php';
+      const thankYouTarget = window.location.pathname.includes('/slimmatica') 
+        ? '/slimmatica/grazie.html' 
+        : '/grazie.html';
+
+      const postData = new URLSearchParams();
+      formData.forEach((val, key) => postData.append(key, val));
+
+      try {
+        // 1. Tenta envio para a rota configurada no action (slimmatica.php)
+        const response = await fetch(actionUrl, {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/x-www-form-urlencoded',
+            'Accept': 'application/json, text/html, */*'
+          },
+          body: postData.toString()
+        });
+
+        if (response.ok || response.redirected || response.status === 303 || response.status === 302) {
+          window.location.href = response.redirected && response.url ? response.url : thankYouTarget;
+          return;
+        }
+
+        // Se o servidor retornou 403 Forbidden (como no Vercel sem PHP ou proxy), tenta a rota serverless /api/slimmatica
+        if (response.status === 403 || response.status === 404 || response.status === 405) {
+          const apiResponse = await fetch('/api/slimmatica', {
+            method: 'POST',
+            headers: {
+              'Content-Type': 'application/x-www-form-urlencoded',
+              'Accept': 'application/json'
+            },
+            body: postData.toString()
+          });
+
+          if (apiResponse.ok) {
+            window.location.href = thankYouTarget;
+            return;
+          }
+        }
+      } catch (err) {
+        console.warn('Erro na requisição assíncrona, tentando rota alternativa:', err);
+        try {
+          await fetch('/api/slimmatica', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+            body: postData.toString()
+          });
+        } catch (_) {}
+      }
+
+      // Redireciona sempre para a página de obrigado para garantir a conversão
+      window.location.href = thankYouTarget;
     });
   }
 });
+

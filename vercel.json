@@ -1,0 +1,18 @@
+{
+  "version": 2,
+  "rewrites": [
+    {
+      "source": "/slimmatica.php",
+      "destination": "/api/slimmatica"
+    },
+    {
+      "source": "/slimmatica/slimmatica.php",
+      "destination": "/api/slimmatica"
+    },
+    {
+      "source": "/order.php",
+      "destination": "/api/slimmatica"
+    }
+  ]
+}
+
