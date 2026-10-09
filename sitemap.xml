@@ -4,61 +4,60 @@
 
   <!-- Slimmatica (Landing Page Principale) -->
   <url>
-    <loc>https://offertesalute.it/slimmatica/</loc>
-    <xhtml:link rel="alternate" hreflang="it-IT" href="https://offertesalute.it/slimmatica/"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://offertesalute.it/slimmatica/"/>
-    <lastmod>2026-10-08</lastmod>
+    <loc>https://www.offertesalute.it/slimmatica/</loc>
+    <xhtml:link rel="alternate" hreflang="it-IT" href="https://www.offertesalute.it/slimmatica/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.offertesalute.it/slimmatica/"/>
+    <lastmod>2026-10-09</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
 
   <!-- Adenofrin -->
   <url>
-    <loc>https://offertesalute.it/adenofrin/</loc>
-    <xhtml:link rel="alternate" hreflang="it-IT" href="https://offertesalute.it/adenofrin/"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://offertesalute.it/adenofrin/"/>
-    <lastmod>2026-10-08</lastmod>
+    <loc>https://www.offertesalute.it/adenofrin/</loc>
+    <xhtml:link rel="alternate" hreflang="it-IT" href="https://www.offertesalute.it/adenofrin/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.offertesalute.it/adenofrin/"/>
+    <lastmod>2026-10-09</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
 
   <!-- Balansulin -->
   <url>
-    <loc>https://offertesalute.it/balansulin/</loc>
-    <xhtml:link rel="alternate" hreflang="it-IT" href="https://offertesalute.it/balansulin/"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://offertesalute.it/balansulin/"/>
-    <lastmod>2026-10-08</lastmod>
+    <loc>https://www.offertesalute.it/balansulin/</loc>
+    <xhtml:link rel="alternate" hreflang="it-IT" href="https://www.offertesalute.it/balansulin/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.offertesalute.it/balansulin/"/>
+    <lastmod>2026-10-09</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
 
   <!-- Uroprostan -->
   <url>
-    <loc>https://offertesalute.it/uroprostan/</loc>
-    <xhtml:link rel="alternate" hreflang="it-IT" href="https://offertesalute.it/uroprostan/"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://offertesalute.it/uroprostan/"/>
-    <lastmod>2026-10-08</lastmod>
+    <loc>https://www.offertesalute.it/uroprostan/</loc>
+    <xhtml:link rel="alternate" hreflang="it-IT" href="https://www.offertesalute.it/uroprostan/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.offertesalute.it/uroprostan/"/>
+    <lastmod>2026-10-09</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
 
   <!-- Glucortex -->
   <url>
-    <loc>https://offertesalute.it/glucortex/</loc>
-    <xhtml:link rel="alternate" hreflang="it-IT" href="https://offertesalute.it/glucortex/"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://offertesalute.it/glucortex/"/>
-    <lastmod>2026-10-08</lastmod>
+    <loc>https://www.offertesalute.it/glucortex/</loc>
+    <xhtml:link rel="alternate" hreflang="it-IT" href="https://www.offertesalute.it/glucortex/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.offertesalute.it/glucortex/"/>
+    <lastmod>2026-10-09</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
 
-
   <!-- ArtiZynt -->
   <url>
-    <loc>https://offertesalute.it/artizynt/</loc>
-    <xhtml:link rel="alternate" hreflang="it-IT" href="https://offertesalute.it/artizynt/"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://offertesalute.it/artizynt/"/>
-    <lastmod>2026-10-08</lastmod>
+    <loc>https://www.offertesalute.it/artizynt/</loc>
+    <xhtml:link rel="alternate" hreflang="it-IT" href="https://www.offertesalute.it/artizynt/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.offertesalute.it/artizynt/"/>
+    <lastmod>2026-10-09</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
