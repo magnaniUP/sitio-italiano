@@ -12,6 +12,14 @@
     {
       "source": "/order.php",
       "destination": "/api/slimmatica"
+    },
+    {
+      "source": "/adenofrin.php",
+      "destination": "/api/adenofrin"
+    },
+    {
+      "source": "/adenofrin/adenofrin.php",
+      "destination": "/api/adenofrin"
     }
   ]
 }

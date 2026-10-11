@@ -661,7 +661,7 @@ button:focus-visible {
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 8px;
+  gap: 14px;
   margin-bottom: 16px;
   padding: 4px 0;
 }
@@ -671,58 +671,14 @@ button:focus-visible {
   align-items: center;
   justify-content: center;
   height: 22px;
-  padding: 0 6px;
-  border-radius: 4px;
-  background-color: #FFFFFF;
-  border: 1px solid #E5E1DA;
-  font-size: 9.5px;
-  font-weight: 800;
-}
-
-.pay-badge.visa {
-  color: #1A1F71;
-  font-style: italic;
-  font-family: serif;
-}
-
-.pay-badge.mastercard {
-  position: relative;
-  width: 32px;
   padding: 0;
+  background-color: transparent;
+  border: none;
+  line-height: 1;
 }
 
-.circle-mc {
-  width: 12px;
-  height: 12px;
-  border-radius: 50%;
-  display: inline-block;
-}
-
-.circle-mc.red {
-  background-color: #EB001B;
-  margin-right: -5px;
-}
-
-.circle-mc.orange {
-  background-color: #F79E1B;
-  opacity: 0.9;
-}
-
-.pay-badge.paypal {
-  color: #003087;
-  font-weight: 900;
-  font-style: italic;
-  font-size: 10px;
-}
-
-.pay-badge.paypal i:nth-child(2) {
-  color: #0079C1;
-  margin-left: -2px;
-}
-
-.pay-badge.cod {
-  background: #F2F8F3;
-  border-color: #D3E6D7;
+.pay-badge svg {
+  display: block;
 }
 
 /* Aviso de Envio Gratuito */
@@ -3069,39 +3025,16 @@ button:focus-visible {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  height: 22px;
+  height: 26px;
   padding: 0 8px;
-  border-radius: 4px;
-  background-color: #FFFFFF;
-  border: 1px solid rgba(255, 255, 255, 0.2);
-  font-size: 9.5px;
-  font-weight: 800;
+  border-radius: 6px;
+  background-color: #FAF8F5;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  line-height: 1;
 }
 
-.footer-pay-badge.visa {
-  color: #1A1F71;
-  font-style: italic;
-  font-family: serif;
-}
-
-.footer-pay-badge.mastercard {
-  position: relative;
-  width: 34px;
-  padding: 0;
-}
-
-.footer-pay-badge.paypal {
-  color: #003087;
-  font-weight: 900;
-  font-style: italic;
-  font-size: 10px;
-}
-
-.footer-pay-badge.cod {
-  background: #EBF4EB;
-  color: #2D6335;
-  font-size: 9px;
-  font-weight: 700;
+.footer-pay-badge svg {
+  display: block;
 }
 
 .footer-divider {
@@ -3524,7 +3457,1982 @@ button:focus-visible {
   }
 }
 
+/* ========================================================
+   ADENOFRIN - HERO SECTION (PRIMEIRA DOBRA)
+   Fiel ao Mockup Original
+   ======================================================== */
 
+.adenofrin-hero {
+  background-color: #FAF8F5;
+  padding: 48px 0 68px 0;
+  width: 100%;
+  position: relative;
+}
 
+.adenofrin-hero .hero-container {
+  max-width: var(--container-max-width, 1200px);
+  margin: 0 auto;
+  padding: 0 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+}
 
+/* Coluna Esquerda */
+.adenofrin-hero .hero-col-left {
+  flex: 1 1 380px;
+  max-width: 410px;
+}
 
+.adenofrin-hero .hero-label {
+  display: inline-block;
+  background-color: #EBE5DB;
+  color: #3B5D34;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  padding: 4px 14px;
+  border-radius: 9999px;
+  margin-bottom: 16px;
+  line-height: 1.4;
+}
+
+.adenofrin-hero .hero-title {
+  font-size: 34px;
+  font-weight: 800;
+  color: #1A3320;
+  line-height: 1.18;
+  letter-spacing: -0.02em;
+  margin-bottom: 16px;
+  font-family: var(--font-family);
+}
+
+.adenofrin-hero .hero-description {
+  font-size: 14.5px;
+  line-height: 1.55;
+  color: #4D574F;
+  margin-bottom: 22px;
+  max-width: 390px;
+}
+
+.adenofrin-hero .hero-benefits-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-bottom: 28px;
+}
+
+.adenofrin-hero .benefit-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 14.5px;
+  font-weight: 600;
+  color: #1F3022;
+}
+
+.adenofrin-hero .benefit-check {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background-color: #4D7D39;
+  color: #FFFFFF;
+  flex-shrink: 0;
+  font-size: 11px;
+  font-weight: 800;
+}
+
+.adenofrin-trust-row {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 12px;
+  padding-top: 22px;
+  border-top: 1px solid rgba(0, 0, 0, 0.07);
+}
+
+.adenofrin-trust-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 6px;
+}
+
+.adenofrin-trust-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 26px;
+  height: 26px;
+  color: #4D7D39;
+}
+
+.adenofrin-trust-label {
+  font-size: 10.5px;
+  font-weight: 600;
+  color: #556257;
+  line-height: 1.25;
+}
+
+/* Coluna Central */
+.adenofrin-hero .hero-col-center {
+  flex: 1 1 420px;
+  max-width: 460px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.adenofrin-hero .product-visual-wrapper {
+  position: relative;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.adenofrin-hero .product-hero-img {
+  width: 100%;
+  max-width: 430px;
+  height: auto;
+  object-fit: contain;
+  filter: drop-shadow(0 14px 28px rgba(35, 45, 36, 0.09));
+  transition: transform 0.3s ease;
+}
+
+.adenofrin-hero .product-hero-img:hover {
+  transform: scale(1.02);
+}
+
+/* Coluna Direita (Card de Oferta) */
+.adenofrin-hero .hero-col-right {
+  flex: 0 0 290px;
+  max-width: 300px;
+}
+
+.adenofrin-offer-card {
+  background-color: transparent;
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  border-radius: 16px;
+  padding: 24px 20px 22px;
+  box-shadow: none;
+  display: flex;
+  flex-direction: column;
+}
+
+.adenofrin-offer-card .offer-tag {
+  font-size: 13.5px;
+  font-weight: 700;
+  color: #B24637;
+  letter-spacing: 0.2px;
+  margin-bottom: 8px;
+}
+
+.adenofrin-offer-card .offer-price-row {
+  display: flex;
+  align-items: baseline;
+  gap: 10px;
+  margin-bottom: 18px;
+}
+
+.adenofrin-offer-card .price-current {
+  font-size: 36px;
+  font-weight: 800;
+  color: #1E3A23;
+  letter-spacing: -0.02em;
+}
+
+.adenofrin-offer-card .price-old {
+  font-size: 17px;
+  font-weight: 500;
+  color: #8E9890;
+  text-decoration: line-through;
+}
+
+.adenofrin-offer-card .btn-hero-cta {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  background-color: #883023;
+  color: #FFFFFF;
+  padding: 13px 20px;
+  border-radius: 10px;
+  font-size: 15.5px;
+  font-weight: 700;
+  text-align: center;
+  box-shadow: 0 4px 14px rgba(136, 48, 35, 0.28);
+  transition: all 0.25s ease;
+  margin-bottom: 16px;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.adenofrin-offer-card .btn-hero-cta:hover {
+  background-color: #72261B;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 18px rgba(136, 48, 35, 0.38);
+}
+
+.adenofrin-offer-card .btn-hero-cta .cta-arrow {
+  font-size: 16px;
+  font-weight: 700;
+  transition: transform 0.2s ease;
+}
+
+.adenofrin-offer-card .btn-hero-cta:hover .cta-arrow {
+  transform: translateX(3px);
+}
+
+.adenofrin-offer-card .payment-methods {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 14px;
+  margin-bottom: 16px;
+}
+
+.adenofrin-offer-card .pay-badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  height: 22px;
+  padding: 0;
+  background-color: transparent;
+  border: none;
+  line-height: 1;
+}
+
+.adenofrin-offer-card .shipping-notice {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  text-align: center;
+}
+
+.adenofrin-offer-card .shipping-check {
+  color: #4D7D39;
+  font-size: 13px;
+  font-weight: 800;
+}
+
+.adenofrin-offer-card .shipping-text {
+  font-size: 12px;
+  font-weight: 600;
+  color: #3F4941;
+}
+
+/* Responsividade específica da Hero do Adenofrin */
+@media (max-width: 1024px) {
+  .adenofrin-hero {
+    padding: 36px 0 52px 0;
+  }
+  .adenofrin-hero .hero-container {
+    gap: 20px;
+  }
+  .adenofrin-hero .hero-title {
+    font-size: 28px;
+  }
+  .adenofrin-hero .price-current {
+    font-size: 30px;
+  }
+  .adenofrin-hero .product-hero-img {
+    max-width: 340px;
+  }
+}
+
+@media (max-width: 820px) {
+  .adenofrin-hero {
+    padding: 28px 0 40px 0;
+  }
+  .adenofrin-hero .hero-container {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 18px !important;
+  }
+  .adenofrin-hero .hero-col-left {
+    order: 1;
+    flex: 0 0 auto !important;
+    width: 100%;
+    max-width: 540px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 0;
+  }
+  .adenofrin-hero .hero-description {
+    max-width: 500px;
+    margin-bottom: 12px;
+  }
+  .adenofrin-hero .hero-benefits-list {
+    align-items: flex-start;
+    display: inline-flex;
+    margin: 0 auto 12px;
+    text-align: left;
+    gap: 8px;
+  }
+  .adenofrin-trust-row {
+    width: 100%;
+    max-width: 460px;
+    margin-bottom: 0;
+    padding-top: 12px;
+  }
+  .adenofrin-hero .hero-col-center {
+    order: 2;
+    flex: 0 0 auto !important;
+    width: 100%;
+    max-width: 320px;
+    height: auto !important;
+    min-height: 0 !important;
+    margin: 0 auto !important;
+    padding: 0 !important;
+    display: block !important;
+  }
+  .adenofrin-hero .product-visual-wrapper {
+    width: 100%;
+    height: auto !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    line-height: 0;
+    display: block;
+  }
+  .adenofrin-hero .product-hero-img {
+    margin: 0 auto !important;
+    display: block;
+    width: 100%;
+    max-width: 300px;
+    height: auto !important;
+  }
+  .adenofrin-hero .hero-col-right {
+    order: 3;
+    flex: 0 0 auto !important;
+    width: 100%;
+    max-width: 360px;
+    margin: 0 auto !important;
+    padding: 0;
+  }
+}
+
+@media (max-width: 480px) {
+  .adenofrin-hero {
+    padding: 16px 0 28px 0;
+  }
+  .adenofrin-hero .hero-container {
+    gap: 14px !important;
+  }
+  .adenofrin-hero .hero-label {
+    margin-bottom: 8px;
+    font-size: 10.5px;
+    padding: 3px 12px;
+  }
+  .adenofrin-hero .hero-title {
+    font-size: 21px;
+    line-height: 1.2;
+    margin-bottom: 8px;
+  }
+  .adenofrin-hero .hero-description {
+    font-size: 13px;
+    line-height: 1.45;
+    margin-bottom: 8px;
+  }
+  .adenofrin-hero .hero-benefits-list {
+    margin: 0 auto 8px;
+    gap: 6px;
+  }
+  .adenofrin-hero .benefit-item {
+    font-size: 13.5px;
+    gap: 8px;
+  }
+  .adenofrin-hero .benefit-check {
+    width: 18px;
+    height: 18px;
+    font-size: 10px;
+  }
+  .adenofrin-trust-row {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 6px 12px;
+    padding-top: 8px;
+    margin-bottom: 0;
+  }
+  .adenofrin-trust-icon {
+    width: 22px;
+    height: 22px;
+  }
+  .adenofrin-trust-label {
+    font-size: 10px;
+  }
+  .adenofrin-hero .hero-col-center {
+    order: 2;
+    flex: 0 0 auto !important;
+    width: 100%;
+    max-width: 270px;
+    height: auto !important;
+    min-height: 0 !important;
+    margin: 0 auto !important;
+    padding: 0 !important;
+    display: block !important;
+  }
+  .adenofrin-hero .product-visual-wrapper {
+    width: 100%;
+    height: auto !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    line-height: 0;
+    display: block;
+  }
+  .adenofrin-hero .product-hero-img {
+    max-width: 260px;
+    width: 100%;
+    height: auto !important;
+    margin: 0 auto !important;
+  }
+  .adenofrin-hero .hero-col-right {
+    order: 3;
+    flex: 0 0 auto !important;
+    width: 100%;
+    max-width: 330px;
+    margin: 0 auto !important;
+    padding: 0;
+  }
+  .adenofrin-offer-card {
+    padding: 14px 16px 12px;
+    margin-top: 0;
+  }
+  .adenofrin-offer-card .offer-tag {
+    font-size: 12px;
+    margin-bottom: 4px;
+  }
+  .adenofrin-offer-card .offer-price-row {
+    margin-bottom: 8px;
+    gap: 8px;
+  }
+  .adenofrin-offer-card .price-current {
+    font-size: 28px;
+  }
+  .adenofrin-offer-card .price-old {
+    font-size: 15px;
+  }
+  .adenofrin-offer-card .btn-hero-cta {
+    font-size: 15px;
+    height: 44px;
+    padding: 10px 16px;
+    margin-bottom: 8px;
+  }
+  .adenofrin-offer-card .payment-methods {
+    margin-bottom: 8px;
+    gap: 6px;
+  }
+  .adenofrin-offer-card .shipping-text {
+    font-size: 11.5px;
+  }
+}
+
+/* ========================================================
+   SEZIONE 2: I BENEFICI E LE INDICAZIONI (ADENOFRIN)
+   ======================================================== */
+.adenofrin-benefits-section {
+  background-color: #FAF8F5;
+  padding: 56px 0 64px 0;
+  border-top: 1px solid rgba(0, 0, 0, 0.06);
+}
+
+.benefits-indications-container {
+  max-width: var(--container-max-width);
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+.benefits-section-header {
+  margin-bottom: 28px;
+}
+
+.benefits-section-title {
+  font-size: 26px;
+  font-weight: 800;
+  color: #1A3320;
+  letter-spacing: -0.02em;
+  line-height: 1.25;
+  margin: 0;
+  font-family: var(--font-family);
+}
+
+/* Layout a 3 Colonne Desktop */
+.benefits-three-cols-grid {
+  display: grid;
+  grid-template-columns: 260px minmax(0, 1fr) 250px;
+  gap: 36px;
+  align-items: center;
+}
+
+/* 1. Colonna Sinistra: Card Illustrazione Silhouette */
+.benefits-col-illustration {
+  display: flex;
+  justify-content: flex-start;
+}
+
+.silhouette-card {
+  width: 100%;
+  max-width: 260px;
+  aspect-ratio: 1 / 1;
+  border-radius: 18px;
+  overflow: hidden;
+  background-color: #F0EAE1;
+  border: 1px solid rgba(0, 0, 0, 0.05);
+  box-shadow: 0 6px 20px rgba(35, 45, 36, 0.04);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.silhouette-card-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* 2. Colonna Centrale: Testo Introduttivo + Lista Indicazioni */
+.benefits-col-main-content {
+  display: flex;
+  flex-direction: column;
+}
+
+.benefits-intro-text {
+  font-size: 14.5px;
+  line-height: 1.6;
+  color: #4D574F;
+  margin-bottom: 20px;
+  max-width: 500px;
+}
+
+.indications-check-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.indication-check-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 14px;
+  font-weight: 600;
+  color: #1F3022;
+  line-height: 1.35;
+}
+
+.indication-badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background-color: #4D7D39;
+  color: #FFFFFF;
+  flex-shrink: 0;
+  font-size: 11px;
+  font-weight: 800;
+}
+
+/* 3. Colonna Destra: 4 Pilares Verticais */
+.benefits-col-pillars {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  justify-content: center;
+}
+
+.pillar-benefit-item {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.pillar-icon-badge {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background-color: #EEF3E6;
+  color: #385A2E;
+  border: 1px solid rgba(77, 125, 57, 0.16);
+  flex-shrink: 0;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.03);
+}
+
+.pillar-text-wrap {
+  display: flex;
+  flex-direction: column;
+}
+
+.pillar-title {
+  font-size: 14px;
+  font-weight: 700;
+  color: #1A3320;
+  line-height: 1.3;
+}
+
+/* Responsividade de Sezione 2: Tablet */
+@media (max-width: 1024px) {
+  .benefits-three-cols-grid {
+    grid-template-columns: 230px minmax(0, 1fr) 220px;
+    gap: 24px;
+  }
+  .silhouette-card {
+    max-width: 230px;
+  }
+  .benefits-section-title {
+    font-size: 24px;
+  }
+}
+
+@media (max-width: 820px) {
+  .adenofrin-benefits-section {
+    padding: 40px 0 48px 0;
+  }
+  .benefits-section-header {
+    text-align: center;
+    margin-bottom: 24px;
+  }
+  .benefits-three-cols-grid {
+    grid-template-columns: 1fr;
+    gap: 28px;
+  }
+  .benefits-col-illustration {
+    justify-content: center;
+    order: 1;
+  }
+  .silhouette-card {
+    max-width: 240px;
+  }
+  .benefits-col-main-content {
+    order: 2;
+    align-items: center;
+    text-align: center;
+  }
+  .benefits-intro-text {
+    max-width: 520px;
+    margin: 0 auto 18px;
+    text-align: center;
+  }
+  .indications-check-list {
+    align-items: flex-start;
+    display: inline-flex;
+    margin: 0 auto;
+    text-align: left;
+    gap: 10px;
+  }
+  .benefits-col-pillars {
+    order: 3;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+    max-width: 480px;
+    margin: 0 auto;
+    width: 100%;
+  }
+}
+
+/* Responsividade de Sezione 2: Mobile */
+@media (max-width: 480px) {
+  .adenofrin-benefits-section {
+    padding: 32px 0 40px 0;
+  }
+  .benefits-section-title {
+    font-size: 21px;
+    line-height: 1.25;
+  }
+  .benefits-section-header {
+    margin-bottom: 20px;
+  }
+  .benefits-three-cols-grid {
+    gap: 22px;
+  }
+  .silhouette-card {
+    max-width: 200px;
+    border-radius: 16px;
+  }
+  .benefits-intro-text {
+    font-size: 13.5px;
+    line-height: 1.5;
+    margin-bottom: 14px;
+    text-align: center;
+  }
+  .indications-check-list {
+    gap: 9px;
+  }
+  .indication-check-item {
+    font-size: 13px;
+    gap: 10px;
+  }
+  .indication-badge {
+    width: 18px;
+    height: 18px;
+    font-size: 10px;
+  }
+  .benefits-col-pillars {
+    grid-template-columns: 1fr;
+    gap: 12px;
+    max-width: 320px;
+  }
+  .pillar-benefit-item {
+    gap: 12px;
+  }
+  .pillar-icon-badge {
+    width: 38px;
+    height: 38px;
+  }
+  .pillar-title {
+    font-size: 13.5px;
+  }
+}
+
+/* ========================================================
+   SEZIONE 3: PERCHÉ SCEGLIERE ADENOFRIN?
+   ======================================================== */
+.adenofrin-why-section {
+  background-color: #FAF8F5;
+  padding: 50px 0 62px 0;
+  border-top: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.why-choose-container {
+  max-width: var(--container-max-width);
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+.why-choose-header {
+  margin-bottom: 28px;
+}
+
+.why-choose-title {
+  font-size: 26px;
+  font-weight: 800;
+  color: #1A3320;
+  letter-spacing: -0.02em;
+  line-height: 1.25;
+  margin: 0;
+  font-family: var(--font-family);
+}
+
+/* Griglia dei 4 cartões horizontal no desktop */
+.why-choose-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+
+.why-card {
+  background-color: #FFFFFF;
+  border: 1px solid rgba(0, 0, 0, 0.06);
+  border-radius: 16px;
+  padding: 26px 20px 24px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  box-shadow: 0 4px 16px rgba(35, 45, 36, 0.03);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.why-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(35, 45, 36, 0.06);
+}
+
+.why-card-icon-wrap {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background-color: #EEF3E6;
+  color: #385A2E;
+  border: 1px solid rgba(77, 125, 57, 0.16);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 16px;
+  flex-shrink: 0;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.02);
+}
+
+.why-card-title {
+  font-size: 16px;
+  font-weight: 700;
+  color: #1A3320;
+  letter-spacing: -0.01em;
+  margin: 0 0 8px 0;
+  line-height: 1.3;
+}
+
+.why-card-desc {
+  font-size: 13px;
+  line-height: 1.5;
+  color: #556257;
+  margin: 0;
+  max-width: 220px;
+}
+
+/* Responsividade: Tablet */
+@media (max-width: 900px) {
+  .adenofrin-why-section {
+    padding: 40px 0 48px 0;
+  }
+  .why-choose-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+  }
+  .why-choose-header {
+    margin-bottom: 22px;
+  }
+}
+
+/* Responsividade: Mobile */
+@media (max-width: 580px) {
+  .adenofrin-why-section {
+    padding: 32px 0 40px 0;
+  }
+  .why-choose-header {
+    text-align: center;
+    margin-bottom: 18px;
+  }
+  .why-choose-title {
+    font-size: 21px;
+    line-height: 1.25;
+  }
+  .why-choose-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+  }
+  .why-card {
+    padding: 20px 14px 18px;
+    border-radius: 14px;
+  }
+  .why-card-icon-wrap {
+    width: 42px;
+    height: 42px;
+    margin-bottom: 12px;
+  }
+  .why-card-title {
+    font-size: 14.5px;
+    margin-bottom: 6px;
+  }
+  .why-card-desc {
+    font-size: 12px;
+    line-height: 1.45;
+  }
+}
+
+@media (max-width: 380px) {
+  .why-choose-grid {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+  .why-card {
+    padding: 18px 16px;
+  }
+}
+
+/* ========================================================
+   SEZIONE 4: GLI INGREDIENTI DELLA FORMULA (ADENOFRIN)
+   ======================================================== */
+.adenofrin-ingredients-section {
+  background-color: #FAF8F5;
+  padding: 54px 0 64px 0;
+  border-top: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.ingredients-container {
+  max-width: var(--container-max-width);
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+.ingredients-header {
+  margin-bottom: 30px;
+}
+
+.ingredients-title {
+  font-size: 26px;
+  font-weight: 800;
+  color: #1A3320;
+  letter-spacing: -0.02em;
+  line-height: 1.25;
+  margin: 0 0 6px 0;
+  font-family: var(--font-family);
+}
+
+.ingredients-subtitle {
+  font-size: 14px;
+  color: #556257;
+  font-weight: 500;
+  margin: 0;
+  line-height: 1.4;
+}
+
+/* Griglia de 6 cartões no Desktop */
+.adenofrin-ingredients-grid {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 16px;
+}
+
+.adenofrin-ingredient-card {
+  background-color: #FFFFFF;
+  border: 1px solid rgba(0, 0, 0, 0.05);
+  border-radius: 16px;
+  padding: 22px 14px 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  box-shadow: 0 4px 14px rgba(35, 45, 36, 0.03);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.adenofrin-ingredient-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 22px rgba(35, 45, 36, 0.06);
+}
+
+.ingredient-avatar-wrap {
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+  overflow: hidden;
+  background-color: #FAF8F5;
+  border: 1px solid rgba(0, 0, 0, 0.05);
+  margin-bottom: 14px;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.03);
+}
+
+.ingredient-avatar-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.ingredient-card-name {
+  font-size: 14px;
+  font-weight: 700;
+  color: #1A3320;
+  margin: 0 0 6px 0;
+  line-height: 1.25;
+}
+
+.ingredient-card-desc {
+  font-size: 11.5px;
+  line-height: 1.45;
+  color: #556257;
+  margin: 0;
+}
+
+/* Responsividade de Ingredientes */
+@media (max-width: 1100px) {
+  .adenofrin-ingredients-grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
+  }
+}
+
+@media (max-width: 820px) {
+  .adenofrin-ingredients-section {
+    padding: 40px 0 48px 0;
+  }
+  .ingredients-header {
+    text-align: center;
+    margin-bottom: 24px;
+  }
+  .ingredients-title {
+    font-size: 23px;
+  }
+  .adenofrin-ingredients-grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 14px;
+  }
+}
+
+@media (max-width: 640px) {
+  .adenofrin-ingredients-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+  }
+  .adenofrin-ingredient-card {
+    padding: 18px 12px 16px;
+    border-radius: 14px;
+  }
+  .ingredient-avatar-wrap {
+    width: 78px;
+    height: 78px;
+    margin-bottom: 10px;
+  }
+  .ingredient-card-name {
+    font-size: 13.5px;
+  }
+  .ingredient-card-desc {
+    font-size: 11px;
+    line-height: 1.4;
+  }
+}
+
+@media (max-width: 360px) {
+  .adenofrin-ingredients-grid {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+}
+
+/* ========================================================
+   SEZIONE 5: COME SI USA ADENOFRIN?
+   ======================================================== */
+.adenofrin-usage-section {
+  background-color: #FAF8F5;
+  padding: 56px 0 64px 0;
+  border-top: 1px solid rgba(0, 0, 0, 0.05);
+  position: relative;
+}
+
+.usage-container {
+  max-width: var(--container-max-width);
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+.usage-two-cols-grid {
+  display: grid;
+  grid-template-columns: 1fr 1.15fr;
+  gap: 44px;
+  align-items: start;
+}
+
+/* Coluna Esquerda: Modalità d'uso */
+.usage-col-instructions {
+  display: flex;
+  flex-direction: column;
+}
+
+.usage-title {
+  font-size: 26px;
+  font-weight: 800;
+  color: #1A3320;
+  letter-spacing: -0.02em;
+  line-height: 1.25;
+  margin: 0 0 10px 0;
+  font-family: var(--font-family);
+}
+
+.usage-intro-text {
+  font-size: 14.5px;
+  line-height: 1.6;
+  color: #4D574F;
+  margin: 0 0 24px 0;
+  max-width: 480px;
+}
+
+.usage-instructions-group {
+  display: flex;
+  align-items: flex-start;
+  gap: 20px;
+}
+
+.usage-icon-circle {
+  width: 58px;
+  height: 58px;
+  border-radius: 50%;
+  background-color: #EEF3E6;
+  color: #385A2E;
+  border: 1px solid rgba(77, 125, 57, 0.16);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.03);
+}
+
+.usage-instructions-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  flex: 1;
+}
+
+.usage-instruction-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  font-size: 14px;
+  font-weight: 600;
+  color: #1F3022;
+  line-height: 1.45;
+}
+
+.usage-check-badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  background-color: #4D7D39;
+  color: #FFFFFF;
+  flex-shrink: 0;
+  font-size: 10.5px;
+  font-weight: 800;
+  margin-top: 1px;
+}
+
+/* Coluna Direita: Cartão de Avvertenze */
+.usage-col-warnings {
+  display: flex;
+  flex-direction: column;
+}
+
+.warning-card {
+  background-color: #F4EFE6;
+  border: 1px solid rgba(178, 70, 55, 0.16);
+  border-radius: 18px;
+  padding: 26px 28px;
+  box-shadow: 0 4px 18px rgba(35, 45, 36, 0.03);
+}
+
+.warning-card-header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 18px;
+}
+
+.warning-icon-wrap {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #B24637;
+  flex-shrink: 0;
+}
+
+.warning-card-title {
+  font-size: 18px;
+  font-weight: 800;
+  color: #1A3320;
+  margin: 0;
+  letter-spacing: -0.01em;
+  line-height: 1.3;
+}
+
+.warning-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.warning-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  font-size: 13.5px;
+  color: #4D574F;
+  line-height: 1.5;
+}
+
+.warning-item-icon {
+  color: #B24637;
+  font-weight: 800;
+  font-size: 14px;
+  line-height: 1.4;
+  flex-shrink: 0;
+}
+
+/* Responsividade */
+@media (max-width: 960px) {
+  .usage-two-cols-grid {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+  .warning-card {
+    padding: 24px 22px;
+  }
+}
+
+@media (max-width: 600px) {
+  .adenofrin-usage-section {
+    padding: 38px 0 46px 0;
+  }
+  .usage-title {
+    font-size: 22px;
+    line-height: 1.25;
+  }
+  .usage-intro-text {
+    font-size: 13.5px;
+    margin-bottom: 18px;
+  }
+  .usage-instructions-group {
+    flex-direction: column;
+    gap: 16px;
+    align-items: flex-start;
+  }
+  .usage-icon-circle {
+    width: 48px;
+    height: 48px;
+  }
+  .usage-instruction-item {
+    font-size: 13px;
+  }
+  .warning-card {
+    padding: 20px 18px;
+    border-radius: 14px;
+  }
+  .warning-card-title {
+    font-size: 16.5px;
+  }
+  .warning-item {
+    font-size: 12.5px;
+    gap: 8px;
+  }
+}
+
+/* ========================================================
+   SEZIONE 6: TABELLA COMPARATIVA ADENOFRIN
+   ======================================================== */
+.adenofrin-comparison-section {
+  background-color: #FAF8F5;
+  padding: 55px 0 70px 0;
+  border-top: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.adenofrin-comparison-section .comparison-title {
+  color: #1A3320;
+}
+
+.adenofrin-comparison-section .comparison-subtitle {
+  color: #556257;
+}
+
+.adenofrin-comparison-section .col-features-head {
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--color-text-dark);
+}
+
+.adenofrin-comparison-section .table-slimmatica-img {
+  height: 36px;
+  width: auto;
+}
+
+@media (max-width: 650px) {
+  .adenofrin-comparison-section {
+    padding: 38px 0 48px 0;
+  }
+
+  .adenofrin-comparison-section .col-features-head {
+    font-size: 11px;
+  }
+
+  .adenofrin-comparison-section .table-slimmatica-img {
+    height: 24px;
+  }
+}
+
+/* ========================================================
+   SEZIONE 7: BANNER PROMOZIONALE ADENOFRIN (#offerta-adenofrin)
+   ======================================================== */
+.adenofrin-promo-banner-section {
+  background-color: #FAF8F5;
+  padding: 10px 0 68px 0;
+}
+
+.adenofrin-promo-card {
+  background: linear-gradient(135deg, #F3EEE4 0%, #EDE6D9 100%);
+  border: 1px solid #DFD6C7;
+  border-radius: 18px;
+  padding: 30px 38px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 32px;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 8px 28px rgba(26, 51, 32, 0.05);
+}
+
+.adenofrin-promo-product {
+  flex: 0 0 230px;
+  max-width: 230px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(255, 255, 255, 0.45);
+  border-radius: 14px;
+  padding: 18px 14px;
+  border: 1px solid rgba(255, 255, 255, 0.6);
+}
+
+.adenofrin-promo-img {
+  width: 100%;
+  height: auto;
+  max-height: 140px;
+  object-fit: contain;
+  display: block;
+  filter: drop-shadow(0 8px 16px rgba(0, 0, 0, 0.1));
+}
+
+.adenofrin-promo-info {
+  flex: 1;
+  max-width: 470px;
+  text-align: left;
+  position: relative;
+  z-index: 1;
+}
+
+.adenofrin-promo-tag {
+  display: inline-block;
+  background-color: #E2ECDC;
+  color: #2B4C25;
+  font-size: 11px;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  padding: 4px 12px;
+  border-radius: 9999px;
+  margin-bottom: 10px;
+}
+
+.adenofrin-promo-title {
+  font-family: var(--font-family);
+  font-size: 23px;
+  font-weight: 800;
+  color: #1A3320;
+  margin: 0 0 8px 0;
+  letter-spacing: -0.02em;
+  line-height: 1.25;
+}
+
+.adenofrin-promo-desc {
+  font-size: 14px;
+  color: #4E5A50;
+  line-height: 1.5;
+  margin: 0 0 18px 0;
+}
+
+.adenofrin-promo-trust {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  flex-wrap: wrap;
+}
+
+.adenofrin-promo-trust-item {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 12.5px;
+  color: #364739;
+  font-weight: 600;
+}
+
+.adenofrin-promo-trust-item svg {
+  stroke: #3B5D34;
+  flex-shrink: 0;
+}
+
+.adenofrin-promo-action {
+  flex: 0 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  text-align: center;
+  position: relative;
+  z-index: 1;
+  background: rgba(255, 255, 255, 0.55);
+  padding: 20px 26px;
+  border-radius: 14px;
+  border: 1px solid rgba(59, 93, 52, 0.1);
+}
+
+.adenofrin-promo-pricing {
+  display: flex;
+  align-items: baseline;
+  justify-content: center;
+  gap: 10px;
+}
+
+.adenofrin-promo-price-current {
+  font-size: 30px;
+  font-weight: 800;
+  color: #1A3320;
+  letter-spacing: -0.02em;
+  line-height: 1.1;
+}
+
+.adenofrin-promo-price-old {
+  font-size: 15px;
+  font-weight: 600;
+  color: #847D74;
+  text-decoration: line-through;
+}
+
+.adenofrin-btn-promo {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  background-color: #7E2E1F;
+  color: #FFFFFF;
+  font-size: 15px;
+  font-weight: 700;
+  padding: 14px 34px;
+  min-height: 48px;
+  border-radius: 9999px;
+  text-decoration: none;
+  box-shadow: 0 4px 14px rgba(126, 46, 31, 0.24);
+  transition: background-color 0.2s ease, transform 0.2s ease, box-shadow 0.2s ease;
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+.adenofrin-btn-promo:hover {
+  background-color: #682417;
+  transform: translateY(-1px);
+  box-shadow: 0 6px 18px rgba(126, 46, 31, 0.32);
+}
+
+.adenofrin-btn-promo:focus-visible {
+  outline: 3px solid #1A3320;
+  outline-offset: 3px;
+}
+
+.adenofrin-btn-promo .cta-arrow {
+  transition: transform 0.2s ease;
+}
+
+.adenofrin-btn-promo:hover .cta-arrow {
+  transform: translateX(3px);
+}
+
+/* Elemento botânico discreto no canto inferior direito conforme o mockup */
+.adenofrin-promo-botanical {
+  position: absolute;
+  right: -6px;
+  bottom: -8px;
+  width: 68px;
+  height: 68px;
+  pointer-events: none;
+  opacity: 0.72;
+  z-index: 0;
+}
+
+/* Responsividade Tablet */
+@media (max-width: 960px) {
+  .adenofrin-promo-card {
+    padding: 24px 26px;
+    gap: 22px;
+  }
+
+  .adenofrin-promo-product {
+    flex: 0 0 185px;
+    max-width: 185px;
+    padding: 14px 10px;
+  }
+
+  .adenofrin-promo-title {
+    font-size: 20px;
+  }
+
+  .adenofrin-promo-desc {
+    font-size: 13px;
+    margin-bottom: 14px;
+  }
+
+  .adenofrin-promo-action {
+    padding: 16px 20px;
+  }
+
+  .adenofrin-promo-price-current {
+    font-size: 26px;
+  }
+
+  .adenofrin-btn-promo {
+    padding: 12px 26px;
+    font-size: 14px;
+  }
+}
+
+/* Responsividade Mobile */
+@media (max-width: 720px) {
+  .adenofrin-promo-banner-section {
+    padding: 6px 0 50px 0;
+  }
+
+  .adenofrin-promo-card {
+    flex-direction: column;
+    text-align: center;
+    padding: 26px 20px 24px;
+    gap: 18px;
+  }
+
+  .adenofrin-promo-product {
+    flex: 0 0 auto;
+    width: 100%;
+    max-width: 240px;
+    margin: 0 auto;
+    padding: 16px;
+  }
+
+  .adenofrin-promo-img {
+    max-height: 125px;
+  }
+
+  .adenofrin-promo-info {
+    max-width: 100%;
+    text-align: center;
+  }
+
+  .adenofrin-promo-title {
+    font-size: 20px;
+  }
+
+  .adenofrin-promo-desc {
+    font-size: 13.5px;
+    margin-bottom: 16px;
+  }
+
+  .adenofrin-promo-trust {
+    justify-content: center;
+    gap: 12px 16px;
+  }
+
+  .adenofrin-promo-action {
+    width: 100%;
+    max-width: 320px;
+    padding: 18px 20px;
+  }
+
+  .adenofrin-btn-promo {
+    width: 100%;
+  }
+}
+
+/* ========================================================
+   SEZIONE 8: RECENSIONI DEI CLIENTI ADENOFRIN (#recensioni)
+   ======================================================== */
+.adenofrin-reviews-section {
+  background-color: #FAF8F5;
+  padding: 54px 0 68px 0;
+  border-top: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.adenofrin-reviews-section .reviews-title {
+  color: #1A3320;
+  font-size: 26px;
+}
+
+.adenofrin-reviews-section .reviews-subtitle {
+  color: #556257;
+  font-size: 14px;
+}
+
+.adenofrin-reviews-section .review-card {
+  background: #FFFFFF;
+  border: 1px solid #E5DEC9;
+  border-radius: 14px;
+  box-shadow: 0 4px 18px rgba(26, 51, 32, 0.04);
+}
+
+.adenofrin-reviews-section .review-card:hover {
+  border-color: rgba(59, 93, 52, 0.25);
+  box-shadow: 0 8px 24px rgba(26, 51, 32, 0.07);
+}
+
+.adenofrin-reviews-section .reviewer-name {
+  color: #1A3320;
+}
+
+.adenofrin-reviews-section .review-text {
+  color: #2E3B30;
+}
+
+.adenofrin-reviews-section .review-likes {
+  color: #4D624F;
+}
+
+.adenofrin-reviews-section .review-read-more {
+  color: #3B5D34;
+}
+
+.adenofrin-reviews-section .review-read-more:hover {
+  color: #7E2E1F;
+}
+
+.adenofrin-reviews-section .pagination-dot.is-active {
+  background: #3B5D34;
+}
+
+@media (max-width: 650px) {
+  .adenofrin-reviews-section {
+    padding: 40px 0 52px 0;
+  }
+
+  .adenofrin-reviews-section .reviews-title {
+    font-size: 22px;
+  }
+
+  .adenofrin-reviews-section .reviews-subtitle {
+    font-size: 13px;
+  }
+}
+
+/* ========================================================
+   SEZIONE 9: SCOPRI ANCHE GLI ALTRI NOSTRI PRODOTTI (#altri-prodotti)
+   ======================================================== */
+.adenofrin-related-products-section {
+  background-color: #FAF8F5;
+  padding: 56px 0 72px 0;
+  border-top: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.adenofrin-related-products-section .related-products-header {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 16px;
+  flex-wrap: wrap;
+  margin-bottom: 34px;
+}
+
+.adenofrin-related-products-section .related-products-title {
+  color: #1A3320;
+  font-size: 26px;
+  font-weight: 800;
+  margin: 0 0 6px 0;
+}
+
+.adenofrin-related-products-section .related-products-subtitle {
+  color: #556257;
+  font-size: 14px;
+  font-weight: 500;
+  margin: 0;
+}
+
+.adenofrin-catalog-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 13.5px;
+  font-weight: 700;
+  color: #3B5D34;
+  text-decoration: none;
+  padding: 8px 16px;
+  border-radius: 9999px;
+  background-color: #EBF2E5;
+  border: 1px solid rgba(59, 93, 52, 0.16);
+  transition: background-color 0.2s ease, color 0.2s ease, transform 0.2s ease;
+  white-space: nowrap;
+}
+
+.adenofrin-catalog-link:hover {
+  background-color: #DFEBD6;
+  color: #1A3320;
+  transform: translateY(-1px);
+}
+
+.adenofrin-catalog-link:focus-visible {
+  outline: 2px solid #1A3320;
+  outline-offset: 2px;
+}
+
+.adenofrin-related-products-section .related-product-card {
+  background: #FFFFFF;
+  border: 1px solid #E5DEC9;
+  border-radius: 16px;
+  box-shadow: 0 4px 18px rgba(26, 51, 32, 0.04);
+  padding: 22px 18px 20px;
+}
+
+.adenofrin-related-products-section .related-product-card:hover {
+  border-color: rgba(59, 93, 52, 0.28);
+  box-shadow: 0 10px 26px rgba(26, 51, 32, 0.08);
+}
+
+.adenofrin-related-products-section .related-product-img-wrap {
+  background-color: #FAF8F4;
+  border-radius: 12px;
+  padding: 12px;
+  height: 145px;
+  margin-bottom: 16px;
+}
+
+.adenofrin-related-products-section .related-product-name {
+  color: #1A3320;
+  font-size: 16px;
+  font-weight: 800;
+}
+
+.adenofrin-related-products-section .related-product-category {
+  color: #3B5D34;
+  font-size: 12.5px;
+  font-weight: 600;
+  margin-bottom: 6px;
+}
+
+.adenofrin-related-products-section .related-product-desc {
+  color: #556257;
+  font-size: 12.5px;
+  line-height: 1.48;
+}
+
+.adenofrin-related-products-section .related-price-current {
+  color: #1A3320;
+  font-size: 18.5px;
+  font-weight: 800;
+}
+
+.adenofrin-related-products-section .btn-product-card {
+  background-color: #7E2E1F;
+  min-height: 42px;
+  font-size: 13.5px;
+}
+
+.adenofrin-related-products-section .btn-product-card:hover {
+  background-color: #682417;
+}
+
+.adenofrin-related-products-section .btn-product-card:focus-visible {
+  outline: 2px solid #1A3320;
+  outline-offset: 2px;
+}
+
+@media (max-width: 650px) {
+  .adenofrin-related-products-section {
+    padding: 42px 0 54px 0;
+  }
+
+  .adenofrin-related-products-section .related-products-header {
+    flex-direction: column;
+    align-items: flex-start;
+    margin-bottom: 24px;
+  }
+
+  .adenofrin-related-products-section .related-products-title {
+    font-size: 22px;
+  }
+
+  .adenofrin-related-products-section .related-products-subtitle {
+    font-size: 13px;
+  }
+}
+
+/* ========================================================
+   SEZIONE 10: DOMANDE FREQUENTI SU ADENOFRIN (#faq)
+   ======================================================== */
+.adenofrin-faq-section {
+  background-color: #FAF8F5;
+  padding: 56px 0 74px 0;
+  border-top: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.adenofrin-faq-container {
+  max-width: var(--container-max-width);
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+.adenofrin-faq-header {
+  margin-bottom: 30px;
+  text-align: left;
+}
+
+.adenofrin-faq-kicker {
+  display: inline-block;
+  background-color: #EBE3D5;
+  color: #6B4D38;
+  font-size: 11px;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  padding: 4px 12px;
+  border-radius: 6px;
+  margin-bottom: 10px;
+}
+
+.adenofrin-faq-title {
+  font-family: var(--font-family);
+  font-size: 26px;
+  font-weight: 800;
+  color: #1A3320;
+  letter-spacing: -0.02em;
+  line-height: 1.25;
+  margin: 0 0 6px 0;
+}
+
+.adenofrin-faq-subtitle {
+  font-size: 14px;
+  color: #556257;
+  font-weight: 500;
+  margin: 0;
+  line-height: 1.45;
+}
+
+.adenofrin-faq-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 16px;
+  align-items: start;
+}
+
+.adenofrin-faq-card.faq-item {
+  background-color: #FFFFFF;
+  border: 1px solid #E5DEC9;
+  border-radius: 14px;
+  box-shadow: 0 4px 16px rgba(26, 51, 32, 0.03);
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.adenofrin-faq-card.faq-item:hover {
+  border-color: rgba(59, 93, 52, 0.28);
+  box-shadow: 0 6px 20px rgba(26, 51, 32, 0.06);
+}
+
+.adenofrin-faq-card.faq-item.is-open {
+  border-color: rgba(59, 93, 52, 0.35);
+  background-color: #FDFCFA;
+}
+
+.adenofrin-faq-card .faq-trigger {
+  padding: 18px 20px;
+  gap: 14px;
+  font-size: 15px;
+  font-weight: 700;
+  color: #1A3320;
+}
+
+.adenofrin-faq-card .faq-trigger:hover {
+  color: #2E5227;
+}
+
+.adenofrin-faq-card .faq-trigger:focus-visible {
+  outline: 2px solid #3B5D34;
+  outline-offset: -2px;
+  border-radius: 14px;
+}
+
+.adenofrin-faq-lead-icon {
+  width: 38px;
+  height: 38px;
+  min-width: 38px;
+  border-radius: 50%;
+  background-color: #EEF3EA;
+  color: #3B5D34;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.adenofrin-faq-card.is-open .adenofrin-faq-lead-icon {
+  background-color: #3B5D34;
+  color: #FFFFFF;
+}
+
+.adenofrin-faq-card .faq-icon {
+  width: 28px;
+  height: 28px;
+  min-width: 28px;
+  border-radius: 50%;
+  background-color: #F5F1E8;
+  color: #7E2E1F;
+}
+
+.adenofrin-faq-card .faq-trigger:hover .faq-icon {
+  background-color: #EBE4D6;
+}
+
+.adenofrin-faq-card .faq-trigger[aria-expanded="true"] .faq-question-text {
+  color: #1A3320;
+}
+
+.adenofrin-faq-card .faq-answer-inner {
+  padding: 0 20px 18px 72px;
+}
+
+.adenofrin-faq-card .faq-answer-inner p {
+  font-size: 13.5px;
+  line-height: 1.58;
+  color: #4E5A50;
+  margin: 0;
+}
+
+@media (max-width: 820px) {
+  .adenofrin-faq-grid {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+}
+
+@media (max-width: 650px) {
+  .adenofrin-faq-section {
+    padding: 42px 0 54px 0;
+  }
+
+  .adenofrin-faq-header {
+    margin-bottom: 22px;
+  }
+
+  .adenofrin-faq-title {
+    font-size: 22px;
+  }
+
+  .adenofrin-faq-subtitle {
+    font-size: 13px;
+  }
+
+  .adenofrin-faq-card .faq-trigger {
+    padding: 15px 16px;
+    gap: 12px;
+    font-size: 14px;
+  }
+
+  .adenofrin-faq-lead-icon {
+    width: 34px;
+    height: 34px;
+    min-width: 34px;
+  }
+
+  .adenofrin-faq-lead-icon svg {
+    width: 17px;
+    height: 17px;
+  }
+
+  .adenofrin-faq-card .faq-answer-inner {
+    padding: 0 16px 16px 16px;
+  }
+
+  .adenofrin-faq-card .faq-answer-inner p {
+    font-size: 13px;
+  }
+}

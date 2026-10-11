@@ -75,9 +75,10 @@ class DevServerHandler(http.server.SimpleHTTPRequestHandler):
         with open(csv_path, 'a', encoding='utf-8') as f:
             f.write(f'"{timestamp}","{name}","{phone}","{country}","{offer_id}","127.0.0.1"\n')
 
-        # Redireciona com sucesso para a página de obrigado do produto (/slimmatica/grazie.html)
+        # Redireciona com sucesso para a página de obrigado do produto
+        redirect_target = '/adenofrin/grazie.html' if 'adenofrin' in self.path else '/slimmatica/grazie.html'
         self.send_response(303)
-        self.send_header('Location', '/slimmatica/grazie.html')
+        self.send_header('Location', redirect_target)
         self.end_headers()
 
 if __name__ == '__main__':

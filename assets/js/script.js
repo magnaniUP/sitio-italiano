@@ -256,16 +256,18 @@ document.addEventListener('DOMContentLoaded', () => {
       }
 
       const formData = new FormData(orderLeadForm);
-      const actionUrl = orderLeadForm.getAttribute('action') || '/slimmatica/slimmatica.php';
-      const thankYouTarget = window.location.pathname.includes('/slimmatica') 
-        ? '/slimmatica/grazie.html' 
-        : '/grazie.html';
+      const isAdenofrin = window.location.pathname.includes('/adenofrin');
+      const actionUrl = orderLeadForm.getAttribute('action') || (isAdenofrin ? '/adenofrin/adenofrin.php' : '/slimmatica/slimmatica.php');
+      const thankYouTarget = isAdenofrin
+        ? '/adenofrin/grazie.html'
+        : (window.location.pathname.includes('/slimmatica') ? '/slimmatica/grazie.html' : '/grazie.html');
+      const fallbackApiUrl = isAdenofrin ? '/api/adenofrin' : '/api/slimmatica';
 
       const postData = new URLSearchParams();
       formData.forEach((val, key) => postData.append(key, val));
 
       try {
-        // 1. Tenta envio para a rota configurada no action (slimmatica.php)
+        // 1. Tenta envio para a rota configurada no action
         const response = await fetch(actionUrl, {
           method: 'POST',
           headers: {
@@ -280,9 +282,9 @@ document.addEventListener('DOMContentLoaded', () => {
           return;
         }
 
-        // Se o servidor retornou 403 Forbidden (como no Vercel sem PHP ou proxy), tenta a rota serverless /api/slimmatica
+        // Se o servidor retornou 403/404/405 (como no Vercel sem PHP), tenta a rota serverless correspondente
         if (response.status === 403 || response.status === 404 || response.status === 405) {
-          const apiResponse = await fetch('/api/slimmatica', {
+          const apiResponse = await fetch(fallbackApiUrl, {
             method: 'POST',
             headers: {
               'Content-Type': 'application/x-www-form-urlencoded',
@@ -299,7 +301,7 @@ document.addEventListener('DOMContentLoaded', () => {
       } catch (err) {
         console.warn('Erro na requisição assíncrona, tentando rota alternativa:', err);
         try {
-          await fetch('/api/slimmatica', {
+          await fetch(fallbackApiUrl, {
             method: 'POST',
             headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
             body: postData.toString()

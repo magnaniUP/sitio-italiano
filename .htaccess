@@ -3,9 +3,9 @@
     RewriteEngine On
     RewriteBase /
 
-    # Garante que requisições POST para slimmatica.php ou slimmatica/slimmatica.php não sejam bloqueadas
+    # Garante que requisições POST para slimmatica.php ou adenofrin.php não sejam bloqueadas
     RewriteCond %{REQUEST_METHOD} POST
-    RewriteRule ^(slimmatica/)?slimmatica\.php$ $0 [L]
+    RewriteRule ^((slimmatica|adenofrin)/)?(slimmatica|adenofrin)\.php$ $0 [L]
 </IfModule>
 
 # Permissões explícitas para execução de arquivos PHP e estáticos

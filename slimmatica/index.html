@@ -20,6 +20,11 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" sizes="32x32" href="/assets/images/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="64x64" href="/assets/images/favicon.png">
+  <link rel="shortcut icon" href="/favicon.ico">
+  <link rel="apple-touch-icon" sizes="180x180" href="/assets/images/apple-touch-icon.png">
   
   <!-- SEO & Metatags per il mercato Italiano -->
   <title>Slimmatica | Integratore Naturale per una Silhouette Snella - Offerte Salute</title>
@@ -724,7 +729,7 @@ button:focus-visible {
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 8px;
+  gap: 14px;
   margin-bottom: 16px;
   padding: 4px 0;
 }
@@ -734,58 +739,14 @@ button:focus-visible {
   align-items: center;
   justify-content: center;
   height: 22px;
-  padding: 0 6px;
-  border-radius: 4px;
-  background-color: #FFFFFF;
-  border: 1px solid #E5E1DA;
-  font-size: 9.5px;
-  font-weight: 800;
-}
-
-.pay-badge.visa {
-  color: #1A1F71;
-  font-style: italic;
-  font-family: serif;
-}
-
-.pay-badge.mastercard {
-  position: relative;
-  width: 32px;
   padding: 0;
+  background-color: transparent;
+  border: none;
+  line-height: 1;
 }
 
-.circle-mc {
-  width: 12px;
-  height: 12px;
-  border-radius: 50%;
-  display: inline-block;
-}
-
-.circle-mc.red {
-  background-color: #EB001B;
-  margin-right: -5px;
-}
-
-.circle-mc.orange {
-  background-color: #F79E1B;
-  opacity: 0.9;
-}
-
-.pay-badge.paypal {
-  color: #003087;
-  font-weight: 900;
-  font-style: italic;
-  font-size: 10px;
-}
-
-.pay-badge.paypal i:nth-child(2) {
-  color: #0079C1;
-  margin-left: -2px;
-}
-
-.pay-badge.cod {
-  background: #F2F8F3;
-  border-color: #D3E6D7;
+.pay-badge svg {
+  display: block;
 }
 
 /* Aviso de Envio Gratuito */
@@ -3129,39 +3090,16 @@ button:focus-visible {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  height: 22px;
+  height: 26px;
   padding: 0 8px;
-  border-radius: 4px;
-  background-color: #FFFFFF;
-  border: 1px solid rgba(255, 255, 255, 0.2);
-  font-size: 9.5px;
-  font-weight: 800;
+  border-radius: 6px;
+  background-color: #FAF8F5;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  line-height: 1;
 }
 
-.footer-pay-badge.visa {
-  color: #1A1F71;
-  font-style: italic;
-  font-family: serif;
-}
-
-.footer-pay-badge.mastercard {
-  position: relative;
-  width: 34px;
-  padding: 0;
-}
-
-.footer-pay-badge.paypal {
-  color: #003087;
-  font-weight: 900;
-  font-style: italic;
-  font-size: 10px;
-}
-
-.footer-pay-badge.cod {
-  background: #EBF4EB;
-  color: #2D6335;
-  font-size: 9px;
-  font-weight: 700;
+.footer-pay-badge svg {
+  display: block;
 }
 
 .footer-divider {
@@ -3942,18 +3880,35 @@ button:focus-visible {
 
             <!-- Métodos de Pagamento -->
             <div class="payment-methods" aria-label="Metodi di pagamento accettati">
-              <span class="pay-badge visa" title="Visa">VISA</span>
-              <span class="pay-badge mastercard" title="Mastercard">
-                <span class="circle-mc red"></span>
-                <span class="circle-mc orange"></span>
+              <span class="pay-badge visa" title="Visa" aria-label="Visa">
+                <svg width="38" height="14" viewBox="0 0 48 16" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                  <path d="M18.6 1.8L15.4 14.2H12.1L15.3 1.8H18.6ZM32.9 9.8L34.6 5.1L35.6 9.8H32.9ZM36.6 14.2H39.7L37 1.8H34.1C33.4 1.8 32.8 2.2 32.5 2.9L27.6 14.2H31.1L31.8 12.2H36.1L36.6 14.2ZM28.2 10.1C28.2 6.8 23.7 6.6 23.7 5.1C23.7 4.6 24.2 4.1 25.2 4C26 3.9 27.4 4.1 28.4 4.6L29 1.9C28.1 1.6 26.9 1.3 25.5 1.3C22.2 1.3 19.9 3 19.9 5.5C19.9 7.3 21.5 8.3 22.8 8.9C24.1 9.5 24.5 9.9 24.5 10.5C24.5 11.4 23.4 11.8 22.4 11.8C20.9 11.8 19.9 11.4 19.1 11L18.5 13.8C19.4 14.2 21 14.5 22.6 14.5C26.1 14.5 28.2 12.8 28.2 10.1ZM13.6 1.8L8.4 14.2H4.9L2.3 4.3C2.1 3.6 1.9 3.3 1.3 3C0.5 2.6 -0.6 2.2 -1.5 2L-1.4 1.8H4.2C4.9 1.8 5.6 2.3 5.8 3.2L7.1 10.2L10.3 1.8H13.6Z" fill="#1A1F71" transform="translate(2, 0)"/>
+                  <path d="M3.3 1.8H0.6L0.5 2C3.8 2.8 6 4.8 6.9 7.3L5.9 2.9C5.7 2.1 5.1 1.8 4.3 1.8H3.3Z" fill="#F79E1B"/>
+                </svg>
               </span>
-              <span class="pay-badge paypal" title="PayPal">
-                <i>P</i><i>P</i>
+              <span class="pay-badge mastercard" title="Mastercard" aria-label="Mastercard">
+                <svg width="28" height="18" viewBox="0 0 32 20" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                  <circle cx="11.5" cy="10" r="7.5" fill="#EB001B"/>
+                  <circle cx="20.5" cy="10" r="7.5" fill="#F79E1B"/>
+                  <path d="M16 4.1A7.48 7.48 0 0 0 13 10c0 2.41 1.18 4.55 3 5.9a7.48 7.48 0 0 0 3-5.9c0-2.41-1.18-4.55-3-5.9z" fill="#FF5F00"/>
+                </svg>
               </span>
-              <span class="pay-badge cod" title="Pagamento alla consegna">
-                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#2C7A4B" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                  <path d="m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/>
-                  <polyline points="9 22 9 12 15 12 15 22"/>
+              <span class="pay-badge paypal" title="PayPal" aria-label="PayPal">
+                <svg width="62" height="17" viewBox="0 0 76 20" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                  <path d="M6.8 2.5h5.2c2.8 0 4.4 1.3 4 3.8-.5 3-2.5 4.5-5.3 4.5H8.5l-.9 5H4.4L6.8 2.5z" fill="#003087"/>
+                  <path d="M9.1 5.2h4.5c2.3 0 3.7 1.1 3.4 3.3-.4 2.6-2.1 3.9-4.5 3.9h-1.9l-.8 4.4H7L9.1 5.2z" fill="#009CDE"/>
+                  <text x="20" y="14.8" fill="#003087" font-family="'Plus Jakarta Sans', Arial, sans-serif" font-weight="800" font-style="italic" font-size="13.5" letter-spacing="-0.3">Pay</text>
+                  <text x="44.5" y="14.8" fill="#009CDE" font-family="'Plus Jakarta Sans', Arial, sans-serif" font-weight="800" font-style="italic" font-size="13.5" letter-spacing="-0.3">Pal</text>
+                </svg>
+              </span>
+              <span class="pay-badge cod" title="Pagamento alla consegna" aria-label="Pagamento alla consegna">
+                <svg width="19" height="18" viewBox="0 0 24 24" fill="none" stroke="#2E5A36" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <polygon points="12 3 3 9 21 9 12 3"/>
+                  <line x1="6" y1="9" x2="6" y2="18"/>
+                  <line x1="10" y1="12" x2="10" y2="16"/>
+                  <line x1="14" y1="12" x2="14" y2="16"/>
+                  <line x1="18" y1="9" x2="18" y2="18"/>
+                  <line x1="4" y1="19" x2="20" y2="19" stroke-width="2.2"/>
                 </svg>
               </span>
             </div>
@@ -5345,15 +5300,37 @@ button:focus-visible {
           </div>
 
           <div class="footer-payment-badges" aria-label="Metodi di pagamento accettati">
-            <span class="footer-pay-badge visa" title="Visa" aria-label="Visa">VISA</span>
-            <span class="footer-pay-badge mastercard" title="Mastercard" aria-label="Mastercard">
-              <svg width="26" height="16" viewBox="0 0 32 20" fill="none" aria-hidden="true">
-                <circle cx="11" cy="10" r="8" fill="#EB001B"/>
-                <circle cx="21" cy="10" r="8" fill="#F79E1B" fill-opacity="0.82"/>
+            <span class="footer-pay-badge visa" title="Visa" aria-label="Visa">
+              <svg width="36" height="13" viewBox="0 0 48 16" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                <path d="M18.6 1.8L15.4 14.2H12.1L15.3 1.8H18.6ZM32.9 9.8L34.6 5.1L35.6 9.8H32.9ZM36.6 14.2H39.7L37 1.8H34.1C33.4 1.8 32.8 2.2 32.5 2.9L27.6 14.2H31.1L31.8 12.2H36.1L36.6 14.2ZM28.2 10.1C28.2 6.8 23.7 6.6 23.7 5.1C23.7 4.6 24.2 4.1 25.2 4C26 3.9 27.4 4.1 28.4 4.6L29 1.9C28.1 1.6 26.9 1.3 25.5 1.3C22.2 1.3 19.9 3 19.9 5.5C19.9 7.3 21.5 8.3 22.8 8.9C24.1 9.5 24.5 9.9 24.5 10.5C24.5 11.4 23.4 11.8 22.4 11.8C20.9 11.8 19.9 11.4 19.1 11L18.5 13.8C19.4 14.2 21 14.5 22.6 14.5C26.1 14.5 28.2 12.8 28.2 10.1ZM13.6 1.8L8.4 14.2H4.9L2.3 4.3C2.1 3.6 1.9 3.3 1.3 3C0.5 2.6 -0.6 2.2 -1.5 2L-1.4 1.8H4.2C4.9 1.8 5.6 2.3 5.8 3.2L7.1 10.2L10.3 1.8H13.6Z" fill="#1A1F71" transform="translate(2, 0)"/>
+                <path d="M3.3 1.8H0.6L0.5 2C3.8 2.8 6 4.8 6.9 7.3L5.9 2.9C5.7 2.1 5.1 1.8 4.3 1.8H3.3Z" fill="#F79E1B"/>
               </svg>
             </span>
-            <span class="footer-pay-badge paypal" title="PayPal" aria-label="PayPal">PayPal</span>
-            <span class="footer-pay-badge cod" title="Pagamento alla consegna" aria-label="Pagamento alla consegna">Contrassegno</span>
+            <span class="footer-pay-badge mastercard" title="Mastercard" aria-label="Mastercard">
+              <svg width="26" height="16" viewBox="0 0 32 20" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                <circle cx="11.5" cy="10" r="7.5" fill="#EB001B"/>
+                <circle cx="20.5" cy="10" r="7.5" fill="#F79E1B"/>
+                <path d="M16 4.1A7.48 7.48 0 0 0 13 10c0 2.41 1.18 4.55 3 5.9a7.48 7.48 0 0 0 3-5.9c0-2.41-1.18-4.55-3-5.9z" fill="#FF5F00"/>
+              </svg>
+            </span>
+            <span class="footer-pay-badge paypal" title="PayPal" aria-label="PayPal">
+              <svg width="58" height="16" viewBox="0 0 76 20" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                <path d="M6.8 2.5h5.2c2.8 0 4.4 1.3 4 3.8-.5 3-2.5 4.5-5.3 4.5H8.5l-.9 5H4.4L6.8 2.5z" fill="#003087"/>
+                <path d="M9.1 5.2h4.5c2.3 0 3.7 1.1 3.4 3.3-.4 2.6-2.1 3.9-4.5 3.9h-1.9l-.8 4.4H7L9.1 5.2z" fill="#009CDE"/>
+                <text x="20" y="14.8" fill="#003087" font-family="'Plus Jakarta Sans', Arial, sans-serif" font-weight="800" font-style="italic" font-size="13.5" letter-spacing="-0.3">Pay</text>
+                <text x="44.5" y="14.8" fill="#009CDE" font-family="'Plus Jakarta Sans', Arial, sans-serif" font-weight="800" font-style="italic" font-size="13.5" letter-spacing="-0.3">Pal</text>
+              </svg>
+            </span>
+            <span class="footer-pay-badge cod" title="Pagamento alla consegna" aria-label="Pagamento alla consegna">
+              <svg width="17" height="16" viewBox="0 0 24 24" fill="none" stroke="#2E5A36" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <polygon points="12 3 3 9 21 9 12 3"/>
+                <line x1="6" y1="9" x2="6" y2="18"/>
+                <line x1="10" y1="12" x2="10" y2="16"/>
+                <line x1="14" y1="12" x2="14" y2="16"/>
+                <line x1="18" y1="9" x2="18" y2="18"/>
+                <line x1="4" y1="19" x2="20" y2="19" stroke-width="2.2"/>
+              </svg>
+            </span>
           </div>
         </div>
 
