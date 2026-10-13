@@ -79,7 +79,7 @@ class DevServerHandler(http.server.SimpleHTTPRequestHandler):
         if 'uroprostan' in self.path:
             netvork_data = {
                 'token': 'ed48d1510bf96ccdd2a080314dd3f0ac',
-                'offer_id': offer_id if offer_id and offer_id != '15495' else '5609',
+                'offer_id': offer_id if offer_id and offer_id != '15495' else '1465',
                 'name': name,
                 'phone': phone,
                 'country': country,

@@ -10,7 +10,7 @@ const STAGE_ENDPOINTS = [
   'https://api2.stage.netvork.net/v1/new-lead'
 ];
 
-const DEFAULT_OFFER_ID = '5609';
+const DEFAULT_OFFER_ID = '1465';
 const DEFAULT_COUNTRY = 'IT';
 const DEFAULT_LANG = 'it';
 const THANK_YOU_URL = '/uroprostan/uroprostansuccess.html';
