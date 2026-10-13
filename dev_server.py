@@ -76,7 +76,12 @@ class DevServerHandler(http.server.SimpleHTTPRequestHandler):
             f.write(f'"{timestamp}","{name}","{phone}","{country}","{offer_id}","127.0.0.1"\n')
 
         # Redireciona com sucesso para a página de obrigado do produto
-        redirect_target = '/adenofrin/grazie.html' if 'adenofrin' in self.path else '/slimmatica/grazie.html'
+        if 'uroprostan' in self.path:
+            redirect_target = '/uroprostan/uroprostansuccess.html'
+        elif 'adenofrin' in self.path:
+            redirect_target = '/adenofrin/grazie.html'
+        else:
+            redirect_target = '/slimmatica/grazie.html'
         self.send_response(303)
         self.send_header('Location', redirect_target)
         self.end_headers()

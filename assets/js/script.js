@@ -181,10 +181,36 @@ document.addEventListener('DOMContentLoaded', () => {
     if (modalOrderBody) modalOrderBody.removeAttribute('hidden');
     if (modalOrderSuccess) modalOrderSuccess.setAttribute('hidden', '');
 
+    // Pre-popola campi di tracciamento dalla URL se presenti
+    populateTrackingFields();
+
     const nameInput = document.getElementById('orderLeadName');
     if (nameInput) {
       setTimeout(() => nameInput.focus(), 80);
     }
+  }
+
+  function populateTrackingFields() {
+    const urlInput = document.getElementById('leadUrl');
+    if (urlInput) urlInput.value = window.location.href;
+
+    try {
+      const urlParams = new URLSearchParams(window.location.search);
+      const offerIdParam = urlParams.get('offer_id');
+      const offerIdInput = document.getElementById('leadOfferId');
+      if (offerIdParam && offerIdInput) {
+        offerIdInput.value = offerIdParam;
+      }
+
+      const trackingFields = ['utm_source', 'utm_medium', 'utm_campaign', 'utm_content', 'utm_term', 'guid', 'first_guid'];
+      trackingFields.forEach(field => {
+        const val = urlParams.get(field);
+        if (val) {
+          const input = document.querySelector(`input[name="${field}"]`);
+          if (input) input.value = val;
+        }
+      });
+    } catch (_) {}
   }
 
   function closeOrderModal() {
@@ -196,7 +222,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // Aggancia tutti i pulsanti Ordina ora
   const orderButtons = document.querySelectorAll(
-    '#headerCtaBtn, .mobile-btn-cta, #heroCtaBtn, .btn-promo-cta, a[href="#ordina"]'
+    '#headerCtaBtn, .mobile-btn-cta, #heroCtaBtn, .btn-promo-cta, .uroprostan-btn-promo, a[href="#ordina"]'
   );
 
   orderButtons.forEach(btn => {
@@ -255,13 +281,17 @@ document.addEventListener('DOMContentLoaded', () => {
         submitBtn.textContent = 'Invio in corso...';
       }
 
+      // Aggiorna url di riferimento prima dell'invio
+      populateTrackingFields();
+
       const formData = new FormData(orderLeadForm);
+      const isUroprostan = window.location.pathname.includes('/uroprostan');
       const isAdenofrin = window.location.pathname.includes('/adenofrin');
-      const actionUrl = orderLeadForm.getAttribute('action') || (isAdenofrin ? '/adenofrin/adenofrin.php' : '/slimmatica/slimmatica.php');
-      const thankYouTarget = isAdenofrin
-        ? '/adenofrin/grazie.html'
-        : (window.location.pathname.includes('/slimmatica') ? '/slimmatica/grazie.html' : '/grazie.html');
-      const fallbackApiUrl = isAdenofrin ? '/api/adenofrin' : '/api/slimmatica';
+      const actionUrl = orderLeadForm.getAttribute('action') || (isUroprostan ? '/uroprostan/uroprostan.php' : (isAdenofrin ? '/adenofrin/adenofrin.php' : '/slimmatica/slimmatica.php'));
+      const thankYouTarget = isUroprostan
+        ? '/uroprostan/uroprostansuccess.html'
+        : (isAdenofrin ? '/adenofrin/grazie.html' : (window.location.pathname.includes('/slimmatica') ? '/slimmatica/grazie.html' : '/grazie.html'));
+      const fallbackApiUrl = isUroprostan ? '/api/uroprostan' : (isAdenofrin ? '/api/adenofrin' : '/api/slimmatica');
 
       const postData = new URLSearchParams();
       formData.forEach((val, key) => postData.append(key, val));
