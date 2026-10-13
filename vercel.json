@@ -20,6 +20,14 @@
     {
       "source": "/adenofrin/adenofrin.php",
       "destination": "/api/adenofrin"
+    },
+    {
+      "source": "/uroprostan.php",
+      "destination": "/api/uroprostan"
+    },
+    {
+      "source": "/uroprostan/uroprostan.php",
+      "destination": "/api/uroprostan"
     }
   ]
 }

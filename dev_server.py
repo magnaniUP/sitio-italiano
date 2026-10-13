@@ -75,6 +75,38 @@ class DevServerHandler(http.server.SimpleHTTPRequestHandler):
         with open(csv_path, 'a', encoding='utf-8') as f:
             f.write(f'"{timestamp}","{name}","{phone}","{country}","{offer_id}","127.0.0.1"\n')
 
+        # Se for Uroprostan, encaminha a requisição real para a API da Netvork
+        if 'uroprostan' in self.path:
+            netvork_data = {
+                'token': 'ed48d1510bf96ccdd2a080314dd3f0ac',
+                'offer_id': offer_id if offer_id and offer_id != '15495' else '5609',
+                'name': name,
+                'phone': phone,
+                'country': country,
+                'lang': lang.lower() if lang else 'it',
+                'ip': '127.0.0.1',
+                'url': form_data.get('url', ['https://offertesalute.it/uroprostan/'])[0],
+                'utm_source': form_data.get('utm_source', [''])[0],
+                'utm_medium': form_data.get('utm_medium', [''])[0],
+                'utm_campaign': form_data.get('utm_campaign', [''])[0],
+                'utm_content': form_data.get('utm_content', [''])[0],
+                'utm_term': form_data.get('utm_term', [''])[0],
+                'session_guid': form_data.get('guid', [''])[0],
+                'session_first_guid': form_data.get('first_guid', [''])[0],
+            }
+            try:
+                encoded = urllib.parse.urlencode(netvork_data).encode('utf-8')
+                req = urllib.request.Request(
+                    'https://api.netvork.net/v1/new-lead',
+                    data=encoded,
+                    headers={'Content-Type': 'application/x-www-form-urlencoded', 'User-Agent': 'Mozilla/5.0'}
+                )
+                with urllib.request.urlopen(req, timeout=10) as resp:
+                    resp_body = resp.read().decode('utf-8')
+                    print(f"[NETVORK API RESPOSTA]: {resp.status} - {resp_body}")
+            except Exception as e:
+                print(f"[NETVORK API AVISO]: {e}")
+
         # Redireciona com sucesso para a página de obrigado do produto
         if 'uroprostan' in self.path:
             redirect_target = '/uroprostan/uroprostansuccess.html'
