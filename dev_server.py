@@ -8,6 +8,9 @@ PORT = 3000
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 
 class DevServerHandler(http.server.SimpleHTTPRequestHandler):
+    def do_HEAD(self):
+        self.do_GET()
+
     def do_GET(self):
         clean_path = self.path.split('?')[0].split('#')[0]
         
@@ -18,8 +21,21 @@ class DevServerHandler(http.server.SimpleHTTPRequestHandler):
             self.end_headers()
             return
         
+        # Redirecionamentos legados de produtos renomeados
+        if clean_path in ('/balansulin', '/balansulin/', '/balansulin.html'):
+            self.send_response(301)
+            self.send_header('Location', '/diabexol-pro/')
+            self.end_headers()
+            return
+            
+        if clean_path in ('/artizynt', '/artizynt/', '/artizynt.html'):
+            self.send_response(301)
+            self.send_header('Location', '/prostalis/')
+            self.end_headers()
+            return
+
         # Resolução de rotas de produtos para suas pastas
-        products = ['slimmatica', 'uroprostan', 'adenofrin', 'balansulin', 'glucortex', 'artizynt']
+        products = ['slimmatica', 'uroprostan', 'adenofrin', 'diabexol-pro', 'glucortex', 'prostalis']
         
         # Ex: /slimmatica -> redireciona para /slimmatica/
         for prod in products:

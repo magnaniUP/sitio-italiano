@@ -6,6 +6,10 @@
     # Garante que requisições POST para slimmatica.php ou adenofrin.php não sejam bloqueadas
     RewriteCond %{REQUEST_METHOD} POST
     RewriteRule ^((slimmatica|adenofrin)/)?(slimmatica|adenofrin)\.php$ $0 [L]
+
+    # Redirecionamentos 301 permanentes de produtos legados para novas páginas
+    RewriteRule ^balansulin(/.*)?$ /diabexol-pro/ [R=301,L]
+    RewriteRule ^artizynt(/.*)?$ /prostalis/ [R=301,L]
 </IfModule>
 
 # Permissões explícitas para execução de arquivos PHP e estáticos

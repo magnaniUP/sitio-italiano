@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
-        xmlns:xhtml="http://www.w3.org/1999/xhtml">
+        xmlns:xhtml="http://www.w3.org/1999/xhtml"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
 
   <!-- Slimmatica (Landing Page Principale) -->
   <url>
@@ -17,17 +18,27 @@
     <loc>https://www.offertesalute.it/adenofrin/</loc>
     <xhtml:link rel="alternate" hreflang="it-IT" href="https://www.offertesalute.it/adenofrin/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://www.offertesalute.it/adenofrin/"/>
-    <lastmod>2026-10-09</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
+    <lastmod>2026-10-29</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.9</priority>
+    <image:image>
+      <image:loc>https://www.offertesalute.it/assets/images/adenofrin.webp</image:loc>
+      <image:title>Adenofrin capsule</image:title>
+      <image:caption>Adenofrin capsule originale - Integratore naturale per il benessere maschile</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.offertesalute.it/assets/images/adenofrin-capsule.webp</image:loc>
+      <image:title>Adenofrin capsule integratore</image:title>
+      <image:caption>Adenofrin capsule dove si compra sul sito ufficiale in farmacia online</image:caption>
+    </image:image>
   </url>
 
-  <!-- Balansulin -->
+  <!-- Diabexol Pro -->
   <url>
-    <loc>https://www.offertesalute.it/balansulin/</loc>
-    <xhtml:link rel="alternate" hreflang="it-IT" href="https://www.offertesalute.it/balansulin/"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.offertesalute.it/balansulin/"/>
-    <lastmod>2026-10-09</lastmod>
+    <loc>https://www.offertesalute.it/diabexol-pro/</loc>
+    <xhtml:link rel="alternate" hreflang="it-IT" href="https://www.offertesalute.it/diabexol-pro/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.offertesalute.it/diabexol-pro/"/>
+    <lastmod>2026-10-29</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -37,9 +48,19 @@
     <loc>https://www.offertesalute.it/uroprostan/</loc>
     <xhtml:link rel="alternate" hreflang="it-IT" href="https://www.offertesalute.it/uroprostan/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://www.offertesalute.it/uroprostan/"/>
-    <lastmod>2026-10-09</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
+    <lastmod>2026-10-29</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.9</priority>
+    <image:image>
+      <image:loc>https://www.offertesalute.it/assets/images/uroprostan.webp</image:loc>
+      <image:title>Uroprostan capsule</image:title>
+      <image:caption>Uroprostan capsule originale - Suplemento alimentar per il benessere delle vie urinarie</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.offertesalute.it/assets/images/uroprostan-capsule.webp</image:loc>
+      <image:title>Uroprostan suplemento alimentar capsule</image:title>
+      <image:caption>Uroprostan a cosa serve: formula naturale per la funzionalità della prostata e vie urinarie</image:caption>
+    </image:image>
   </url>
 
   <!-- Glucortex -->
@@ -52,12 +73,12 @@
     <priority>0.8</priority>
   </url>
 
-  <!-- ArtiZynt -->
+  <!-- Prostalis -->
   <url>
-    <loc>https://www.offertesalute.it/artizynt/</loc>
-    <xhtml:link rel="alternate" hreflang="it-IT" href="https://www.offertesalute.it/artizynt/"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.offertesalute.it/artizynt/"/>
-    <lastmod>2026-10-09</lastmod>
+    <loc>https://www.offertesalute.it/prostalis/</loc>
+    <xhtml:link rel="alternate" hreflang="it-IT" href="https://www.offertesalute.it/prostalis/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.offertesalute.it/prostalis/"/>
+    <lastmod>2026-10-29</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
