@@ -15,7 +15,29 @@ class DevServerHandler(http.server.SimpleHTTPRequestHandler):
         clean_path = self.path.split('?')[0].split('#')[0]
         
         # Redirecionamentos de páginas legadas
+        if clean_path in ('/diabexol-pro/success.php', '/diabexol-pro/grazie.html'):
+            self.send_response(302)
+            self.send_header('Location', '/diabexol-pro/diabexolpro.html')
+            self.end_headers()
+            return
+
         if clean_path in ('/slimmaticasuccess.php', '/success.php', '/grazie.html'):
+            referer = self.headers.get('Referer', '')
+            if 'diabexol' in referer or 'dibaxol' in referer:
+                self.send_response(302)
+                self.send_header('Location', '/diabexol-pro/diabexolpro.html')
+                self.end_headers()
+                return
+            if 'adenofrin' in referer:
+                self.send_response(302)
+                self.send_header('Location', '/adenofrin/grazie.html')
+                self.end_headers()
+                return
+            if 'uroprostan' in referer:
+                self.send_response(302)
+                self.send_header('Location', '/uroprostan/uroprostansuccess.html')
+                self.end_headers()
+                return
             self.send_response(302)
             self.send_header('Location', '/slimmatica/grazie.html')
             self.end_headers()
@@ -124,11 +146,12 @@ class DevServerHandler(http.server.SimpleHTTPRequestHandler):
                 print(f"[NETVORK API AVISO]: {e}")
 
         # Redireciona com sucesso para a página de obrigado do produto
-        if 'uroprostan' in self.path:
+        referer = self.headers.get('Referer', '')
+        if 'uroprostan' in self.path or 'uroprostan' in referer:
             redirect_target = '/uroprostan/uroprostansuccess.html'
-        elif 'adenofrin' in self.path:
+        elif 'adenofrin' in self.path or 'adenofrin' in referer:
             redirect_target = '/adenofrin/grazie.html'
-        elif 'diabexol' in self.path or 'dibaxol' in self.path:
+        elif 'diabexol' in self.path or 'dibaxol' in self.path or 'diabexol' in referer or 'dibaxol' in referer:
             redirect_target = '/diabexol-pro/diabexolpro.html'
         else:
             redirect_target = '/slimmatica/grazie.html'

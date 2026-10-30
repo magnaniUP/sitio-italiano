@@ -202,7 +202,7 @@ document.addEventListener('DOMContentLoaded', () => {
         offerIdInput.value = offerIdParam;
       }
 
-      const trackingFields = ['utm_source', 'utm_medium', 'utm_campaign', 'utm_content', 'utm_term', 'guid', 'first_guid'];
+      const trackingFields = ['channel', 'utm_source', 'utm_medium', 'utm_campaign', 'utm_content', 'utm_term', 'guid', 'first_guid'];
       trackingFields.forEach(field => {
         const val = urlParams.get(field);
         if (val) {
@@ -311,7 +311,7 @@ document.addEventListener('DOMContentLoaded', () => {
         });
 
         if (response.ok || response.redirected || response.status === 303 || response.status === 302) {
-          window.location.href = response.redirected && response.url ? response.url : thankYouTarget;
+          window.location.href = thankYouTarget;
           return;
         }
 

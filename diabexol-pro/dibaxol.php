@@ -4,7 +4,7 @@
 // CONFIGURAÇÃO — troque pelos seus dados reais da conta KMA
 // ==========================================================
 define('KMA_ACCESS_TOKEN', 'LGetGr2KPOuL1kDHrXlm2Zb9msuMVq6Z');
-define('KMA_CHANNEL', '2Zj1zc');
+define('KMA_CHANNEL', 'orvCWj');
 define('KMA_DEBUG', false);
 
 // ==========================================================
@@ -207,7 +207,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $name    = !empty($_POST['name']) ? trim($_POST['name']) : '';
     $phone   = !empty($_POST['phone']) ? trim($_POST['phone']) : '';
     $country = !empty($_POST['country']) ? trim($_POST['country']) : 'IT';
-    $offerId = !empty($_POST['offer_id']) ? trim($_POST['offer_id']) : '28221';
+    $offerId = !empty($_POST['offer_id']) ? trim($_POST['offer_id']) : '30162';
+    $channel = !empty($_POST['channel']) ? trim($_POST['channel']) : KMA_CHANNEL;
 
     $utmSource   = !empty($_POST['utm_source']) ? trim($_POST['utm_source']) : '';
     $utmMedium   = !empty($_POST['utm_medium']) ? trim($_POST['utm_medium']) : '';
@@ -224,7 +225,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $lead->debug = KMA_DEBUG;
 
     $data = array(
-        'channel'      => KMA_CHANNEL,
+        'channel'      => $channel,
         'name'         => $name,
         'phone'        => $phone,
         'ip'           => $lead->getIp(),
@@ -241,7 +242,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $order = $lead->addLead($data);
 
     if ($order !== false) {
-        header('Location: success.php');
+        header('Location: diabexolpro.html');
     } else {
         header('Location: index.html?error=api');
     }
@@ -250,3 +251,4 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
 header('Location: diabexolpro.html');
 exit();
+
