@@ -128,6 +128,8 @@ class DevServerHandler(http.server.SimpleHTTPRequestHandler):
             redirect_target = '/uroprostan/uroprostansuccess.html'
         elif 'adenofrin' in self.path:
             redirect_target = '/adenofrin/grazie.html'
+        elif 'diabexol' in self.path or 'dibaxol' in self.path:
+            redirect_target = '/diabexol-pro/diabexolpro.html'
         else:
             redirect_target = '/slimmatica/grazie.html'
         self.send_response(303)

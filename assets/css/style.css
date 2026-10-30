@@ -3025,13 +3025,15 @@ button:focus-visible {
   display: inline-flex;
   align-items: center;
   justify-content: center;
+  gap: 6px;
   height: 28px;
   padding: 0 10px;
   border-radius: 6px;
   background-color: #FFFFFF;
-  border: 1px solid rgba(255, 255, 255, 0.25);
+  border: 1px solid rgba(255, 255, 255, 0.4);
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.12);
   line-height: 1;
+  color: #1A1A1A;
   transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
@@ -3042,6 +3044,15 @@ button:focus-visible {
 
 .footer-pay-badge svg {
   display: block;
+}
+
+.footer-pay-badge .footer-cod-text {
+  font-family: var(--font-family, 'Plus Jakarta Sans', system-ui, sans-serif);
+  font-size: 11px;
+  font-weight: 700;
+  color: #1E5C2D;
+  letter-spacing: -0.01em;
+  white-space: nowrap;
 }
 
 .footer-divider {
@@ -3448,6 +3459,40 @@ button:focus-visible {
 
 .btn-modal-success-close:hover {
   background: #000000;
+}
+
+/* Personalizzazione Tema Diabexol Pro per Modal */
+.page-diabexol .modal-price-now,
+.diabexol-modal .modal-price-now {
+  color: #6E3F20;
+}
+
+.page-diabexol .modal-input:focus,
+.diabexol-modal .modal-input:focus {
+  border-color: #6E3F20;
+  box-shadow: 0 0 0 3px rgba(110, 63, 32, 0.15);
+}
+
+.page-diabexol .btn-modal-cta,
+.diabexol-modal .btn-modal-cta {
+  background-color: #6E3F20;
+  box-shadow: 0 6px 18px rgba(110, 63, 32, 0.32);
+}
+
+.page-diabexol .btn-modal-cta:hover,
+.diabexol-modal .btn-modal-cta:hover {
+  background-color: #552F16;
+  box-shadow: 0 8px 22px rgba(110, 63, 32, 0.4);
+}
+
+.page-diabexol .btn-modal-success-close,
+.diabexol-modal .btn-modal-success-close {
+  background: #6E3F20;
+}
+
+.page-diabexol .btn-modal-success-close:hover,
+.diabexol-modal .btn-modal-success-close:hover {
+  background: #552F16;
 }
 
 @media (max-width: 480px) {
@@ -7531,4 +7576,2097 @@ button:focus-visible {
     margin-bottom: 18px;
   }
 }
+
+/* ========================================================
+   SEZIONE 6: COME SI USA DIABEXOL PRO?
+   ======================================================== */
+.diabexol-usage-section {
+  background-color: #FAF8F5;
+  padding: 56px 0 68px 0;
+  width: 100%;
+  position: relative;
+  border-top: 1px solid rgba(236, 228, 216, 0.45);
+}
+
+.diabexol-usage-section .usage-container {
+  max-width: var(--container-max-width, 1200px);
+  margin: 0 auto;
+  padding: 0 24px;
+  display: grid;
+  grid-template-columns: 320px 1fr;
+  gap: 48px;
+  align-items: center;
+}
+
+/* Colonna Sinistra: Immagine Flacone e Capsule */
+.usage-visual-col {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.usage-bottle-frame {
+  position: relative;
+  display: inline-block;
+  width: 100%;
+  max-width: 320px;
+}
+
+.usage-bottle-img {
+  width: 100%;
+  height: auto;
+  display: block;
+  filter: drop-shadow(0 14px 28px rgba(0, 0, 0, 0.08));
+  transition: transform 0.3s ease;
+}
+
+.usage-bottle-img:hover {
+  transform: scale(1.02);
+}
+
+/* Colonna Destra: Contenuti e Passaggi */
+.usage-content-col {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 100%;
+}
+
+.usage-header {
+  margin-bottom: 28px;
+  text-align: left;
+}
+
+.usage-badge {
+  display: inline-block;
+  background-color: #EFE9DF;
+  color: #7A4E2D;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  padding: 4px 14px;
+  border-radius: 9999px;
+  margin-bottom: 12px;
+  line-height: 1.4;
+}
+
+.usage-title {
+  font-size: 32px;
+  font-weight: 800;
+  color: #2B2522;
+  line-height: 1.25;
+  letter-spacing: -0.02em;
+  margin: 0 0 8px 0;
+  font-family: var(--font-family, 'Plus Jakarta Sans', system-ui, sans-serif);
+}
+
+.usage-subtitle {
+  font-size: 15px;
+  line-height: 1.55;
+  color: #6E635B;
+  margin: 0;
+}
+
+/* Griglia 4 Schede Passaggi */
+.usage-steps-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+  width: 100%;
+}
+
+.usage-step-card {
+  background-color: #FFFFFF;
+  border: 1px solid #ECE4D8;
+  border-radius: 16px;
+  padding: 20px 14px 18px 14px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  position: relative;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.02);
+  transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+  min-height: 158px;
+}
+
+.usage-step-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 22px rgba(122, 78, 45, 0.08);
+  border-color: #DBCBB9;
+}
+
+/* Badge numerato rotondo in alto */
+.step-number-badge {
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  border: 1.5px solid #D6C7B2;
+  background-color: #FAF8F5;
+  color: #7A4E2D;
+  font-size: 12px;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 12px;
+  line-height: 1;
+}
+
+/* Contenitore Icona */
+.step-icon-box {
+  width: 38px;
+  height: 38px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 12px;
+  color: #7A4E2D;
+}
+
+.step-icon-box svg {
+  stroke: #7A4E2D;
+}
+
+/* Testo del passaggio */
+.step-text {
+  font-size: 13px;
+  line-height: 1.45;
+  color: #4A4039;
+  font-weight: 600;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.step-text-sub {
+  font-size: 12px;
+  font-weight: 500;
+  color: #8C7D72;
+  margin-top: 2px;
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .diabexol-usage-section .usage-container {
+    grid-template-columns: 260px 1fr;
+    gap: 32px;
+  }
+
+  .usage-steps-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 14px;
+  }
+}
+
+@media (max-width: 860px) {
+  .diabexol-usage-section {
+    padding: 42px 0 52px 0;
+  }
+
+  .diabexol-usage-section .usage-container {
+    grid-template-columns: 1fr;
+    gap: 28px;
+    text-align: center;
+  }
+
+  .usage-visual-col {
+    order: 1;
+    max-width: 260px;
+    margin: 0 auto;
+  }
+
+  .usage-content-col {
+    order: 2;
+    align-items: center;
+  }
+
+  .usage-header {
+    text-align: center;
+    margin-bottom: 24px;
+  }
+
+  .usage-title {
+    font-size: 26px;
+  }
+
+  .usage-steps-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 14px;
+    max-width: 500px;
+    margin: 0 auto;
+  }
+}
+
+@media (max-width: 540px) {
+  .diabexol-usage-section {
+    padding: 34px 0 44px 0;
+  }
+
+  .diabexol-usage-section .usage-container {
+    padding: 0 16px;
+    gap: 22px;
+  }
+
+  .usage-visual-col {
+    max-width: 210px;
+  }
+
+  .usage-title {
+    font-size: 23px;
+  }
+
+  .usage-subtitle {
+    font-size: 13.5px;
+  }
+
+  .usage-steps-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+    width: 100%;
+  }
+
+  .usage-step-card {
+    padding: 16px 10px 14px 10px;
+    min-height: 146px;
+    border-radius: 14px;
+  }
+
+  .step-icon-box {
+    width: 32px;
+    height: 32px;
+    margin-bottom: 8px;
+  }
+
+  .step-icon-box svg {
+    width: 22px;
+    height: 22px;
+  }
+
+  .step-text {
+    font-size: 12px;
+  }
+
+  .step-text-sub {
+    font-size: 11px;
+  }
+}
+
+/* ========================================================
+   SEZIONE 7: TABELLA COMPARATIVA (DIABEXOL PRO VS ALTRI)
+   ======================================================== */
+.diabexol-compare-section {
+  background-color: #FAF8F5;
+  padding: 56px 0 68px 0;
+  width: 100%;
+  position: relative;
+  border-top: 1px solid rgba(236, 228, 216, 0.45);
+}
+
+.diabexol-compare-section .compare-container {
+  max-width: var(--container-max-width, 1200px);
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+.compare-header {
+  margin-bottom: 28px;
+  text-align: left;
+}
+
+.compare-title {
+  font-size: 30px;
+  font-weight: 800;
+  color: #2B2522;
+  line-height: 1.25;
+  letter-spacing: -0.02em;
+  margin: 0 0 8px 0;
+  font-family: var(--font-family, 'Plus Jakarta Sans', system-ui, sans-serif);
+}
+
+.compare-subtitle {
+  font-size: 15px;
+  line-height: 1.55;
+  color: #6E635B;
+  margin: 0;
+}
+
+/* Wrapper tabella con scorrimento orizzontale pulito su mobile */
+.compare-table-wrapper {
+  width: 100%;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  border-radius: 16px;
+  border: 1px solid #ECE4D8;
+  background-color: #FAF6F0;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.02);
+}
+
+.compare-table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: center;
+  font-family: var(--font-family, 'Plus Jakarta Sans', system-ui, sans-serif);
+}
+
+/* Colonne e intestazioni */
+.compare-table th,
+.compare-table td {
+  padding: 14px 18px;
+  vertical-align: middle;
+  border-bottom: 1px solid #ECE4D8;
+}
+
+.compare-table tbody tr:last-child td {
+  border-bottom: none;
+}
+
+/* Colonna Caratteristiche (Sinistra) */
+.col-feature-title {
+  text-align: left;
+  font-size: 14.5px;
+  font-weight: 600;
+  color: #3D3530;
+  width: 32%;
+}
+
+.compare-table th.col-feature-title {
+  background-color: #F3ECE2;
+  color: #5A4E44;
+  font-size: 13.5px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  border-bottom: 2px solid #E2D5C3;
+}
+
+/* Colonna Diabexol Pro in Destaque (Marrone Scuro) */
+.col-diabexol {
+  background-color: #7A4E2D;
+  color: #FFFFFF;
+  width: 26%;
+  font-weight: 700;
+}
+
+.compare-table th.col-diabexol {
+  background-color: #6C4223;
+  color: #FFFFFF;
+  font-size: 17px;
+  font-weight: 800;
+  letter-spacing: -0.01em;
+  padding: 18px 16px;
+}
+
+.compare-table td.col-diabexol {
+  background-color: #7A4E2D;
+  color: #FFFFFF;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+.compare-table td.col-diabexol .check-icon {
+  font-size: 18px;
+  color: #FFFFFF;
+  font-weight: 900;
+  display: inline-block;
+}
+
+/* Colonne Concorrenti (Prodotto A e Prodotto B) */
+.col-competitor {
+  width: 21%;
+  color: #6E635B;
+  font-size: 14px;
+  background-color: #FAF6F0;
+}
+
+.compare-table th.col-competitor {
+  background-color: #F3ECE2;
+  color: #5A4E44;
+  font-size: 15px;
+  font-weight: 700;
+  border-bottom: 2px solid #E2D5C3;
+}
+
+.compare-table td.col-competitor .cross-icon {
+  font-size: 15px;
+  color: #B5A89B;
+  font-weight: 700;
+  display: inline-block;
+}
+
+/* Riga Prezzo e Pulsante */
+.compare-row-price td {
+  padding: 18px 16px 20px 16px;
+  background-color: #F0E8DC;
+}
+
+.compare-table td.col-diabexol.cell-price {
+  background-color: #643C1E;
+}
+
+.price-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+}
+
+.price-diabexol {
+  font-size: 20px;
+  font-weight: 800;
+  color: #FFFFFF;
+}
+
+.btn-compare-cta {
+  display: inline-block;
+  background-color: #FFFFFF;
+  color: #6C4223;
+  font-size: 13.5px;
+  font-weight: 800;
+  padding: 8px 18px;
+  border-radius: 9999px;
+  text-decoration: none;
+  transition: all 0.25s ease;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+}
+
+.btn-compare-cta:hover {
+  background-color: #FAF4EB;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.2);
+}
+
+.price-competitor {
+  font-size: 16px;
+  font-weight: 600;
+  color: #7E7268;
+}
+
+.btn-competitor-disabled {
+  display: inline-block;
+  background-color: #E6DED4;
+  color: #A3968A;
+  font-size: 12.5px;
+  font-weight: 600;
+  padding: 6px 14px;
+  border-radius: 9999px;
+  pointer-events: none;
+}
+
+/* Responsive Tabella */
+.cta-short {
+  display: none;
+}
+.cta-full {
+  display: inline;
+}
+
+@media (max-width: 860px) {
+  .diabexol-compare-section {
+    padding: 42px 0 52px 0;
+  }
+
+  .compare-title {
+    font-size: 25px;
+  }
+
+  .compare-table th,
+  .compare-table td {
+    padding: 12px 10px;
+  }
+}
+
+@media (max-width: 640px) {
+  .diabexol-compare-section {
+    padding: 34px 0 44px 0;
+  }
+
+  .diabexol-compare-section .compare-container {
+    padding: 0 12px;
+  }
+
+  .compare-title {
+    font-size: 22px;
+  }
+
+  .compare-subtitle {
+    font-size: 13.5px;
+  }
+
+  .compare-table-wrapper {
+    overflow-x: hidden;
+    border-radius: 14px;
+  }
+
+  .compare-table {
+    table-layout: fixed;
+    width: 100%;
+    min-width: 0;
+  }
+
+  .compare-table th,
+  .compare-table td {
+    padding: 10px 4px;
+    word-break: break-word;
+  }
+
+  /* Proporzioni esatte per contenitore mobile 360px - 414px */
+  .col-feature-title {
+    width: 34%;
+    font-size: 11.5px;
+    line-height: 1.25;
+    padding-left: 8px !important;
+    padding-right: 4px !important;
+  }
+
+  .compare-table th.col-feature-title {
+    font-size: 10.5px;
+    letter-spacing: 0.02em;
+  }
+
+  .col-diabexol {
+    width: 26%;
+  }
+
+  .compare-table th.col-diabexol {
+    font-size: 12.5px;
+    padding: 12px 4px;
+  }
+
+  .compare-table td.col-diabexol .check-icon {
+    font-size: 16px;
+  }
+
+  .col-competitor {
+    width: 20%;
+    font-size: 11px;
+  }
+
+  .compare-table th.col-competitor {
+    font-size: 11px;
+    padding: 12px 2px;
+  }
+
+  .compare-table td.col-competitor .cross-icon {
+    font-size: 13px;
+  }
+
+  /* Prezzi e bottoni per mobile */
+  .compare-row-price td {
+    padding: 10px 3px 12px 3px;
+  }
+
+  .price-diabexol {
+    font-size: 13.5px;
+  }
+
+  .price-competitor {
+    font-size: 11.5px;
+  }
+
+  .cta-full {
+    display: none;
+  }
+
+  .cta-short {
+    display: inline;
+  }
+
+  .btn-compare-cta {
+    font-size: 10.5px;
+    padding: 5px 8px;
+    width: 90%;
+    box-sizing: border-box;
+    text-align: center;
+  }
+
+  .btn-competitor-disabled {
+    font-size: 10px;
+    padding: 4px 6px;
+    width: 85%;
+    box-sizing: border-box;
+    text-align: center;
+  }
+}
+
+@media (max-width: 380px) {
+  .col-feature-title {
+    font-size: 10.5px;
+    padding-left: 6px !important;
+  }
+
+  .compare-table th.col-diabexol {
+    font-size: 11.5px;
+  }
+
+  .price-diabexol {
+    font-size: 12.5px;
+  }
+
+  .price-competitor {
+    font-size: 10.5px;
+  }
+
+  .btn-compare-cta {
+    font-size: 9.5px;
+    padding: 4px 4px;
+  }
+}
+
+/* ========================================================
+   SEZIONE 8: COME AGISCE DIABEXOL PRO
+   ======================================================== */
+.diabexol-agisce-section {
+  background-color: #FAF8F5;
+  padding: 56px 0 68px 0;
+  width: 100%;
+  position: relative;
+  border-top: 1px solid rgba(236, 228, 216, 0.45);
+}
+
+.diabexol-agisce-section .agisce-container {
+  max-width: var(--container-max-width, 1200px);
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+.diabexol-agisce-header {
+  margin-bottom: 34px;
+  text-align: left;
+}
+
+.agisce-badge {
+  display: inline-block;
+  background-color: #EFE9DF;
+  color: #7A4E2D;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  padding: 4px 14px;
+  border-radius: 9999px;
+  margin-bottom: 12px;
+  line-height: 1.4;
+}
+
+.diabexol-agisce-title {
+  font-size: 32px;
+  font-weight: 800;
+  color: #2B2522;
+  line-height: 1.25;
+  letter-spacing: -0.02em;
+  margin: 0 0 8px 0;
+  font-family: var(--font-family, 'Plus Jakarta Sans', system-ui, sans-serif);
+}
+
+.diabexol-agisce-subtitle {
+  font-size: 15px;
+  line-height: 1.55;
+  color: #6E635B;
+  margin: 0;
+}
+
+/* Contenitore a due colonne: Processo a sinistra e Silhouette a destra */
+.diabexol-agisce-layout {
+  display: grid;
+  grid-template-columns: 1fr 280px;
+  gap: 40px;
+  align-items: center;
+}
+
+/* Flusso a 4 passaggi orizzontali */
+.agisce-steps-flow {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  width: 100%;
+  position: relative;
+}
+
+/* Singolo nodo di beneficio */
+.agisce-step-node {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  flex: 1;
+  max-width: 175px;
+  padding: 0 6px;
+  position: relative;
+}
+
+/* Icona rotonda marrone */
+.agisce-icon-circle {
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  background-color: #7A4E2D;
+  color: #FFFFFF;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 14px;
+  box-shadow: 0 4px 14px rgba(122, 78, 45, 0.22);
+  transition: transform 0.25s ease, background-color 0.25s ease;
+  flex-shrink: 0;
+}
+
+.agisce-step-node:hover .agisce-icon-circle {
+  transform: translateY(-2px) scale(1.05);
+  background-color: #643C1E;
+}
+
+.agisce-icon-circle svg {
+  stroke: #FFFFFF;
+}
+
+/* Freccia di connessione tra i passaggi */
+.agisce-arrow-divider {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #C4B5A5;
+  margin-top: 15px;
+  flex-shrink: 0;
+}
+
+.agisce-arrow-divider svg {
+  stroke: #C4B5A5;
+}
+
+/* Testi del nodo */
+.agisce-node-title {
+  font-size: 14.5px;
+  font-weight: 700;
+  color: #2B2522;
+  margin: 0 0 6px 0;
+  line-height: 1.3;
+}
+
+.agisce-node-desc {
+  font-size: 12px;
+  line-height: 1.45;
+  color: #7E7268;
+  margin: 0;
+}
+
+/* Colonna Silhouette */
+.agisce-silhouette-col {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.agisce-silhouette-frame {
+  max-width: 320px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.agisce-silhouette-img {
+  width: 100%;
+  height: auto;
+  max-width: 300px;
+  display: block;
+  filter: drop-shadow(0 8px 24px rgba(0, 0, 0, 0.06));
+  transition: transform 0.3s ease;
+}
+
+.agisce-silhouette-img:hover {
+  transform: scale(1.03);
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .diabexol-agisce-layout {
+    grid-template-columns: 1fr 220px;
+    gap: 24px;
+  }
+
+  .agisce-icon-circle {
+    width: 46px;
+    height: 46px;
+  }
+
+  .agisce-node-title {
+    font-size: 13.5px;
+  }
+
+  .agisce-node-desc {
+    font-size: 11.5px;
+  }
+}
+
+@media (max-width: 860px) {
+  .diabexol-agisce-section {
+    padding: 42px 0 52px 0;
+  }
+
+  .diabexol-agisce-header {
+    text-align: center;
+    margin-bottom: 26px;
+  }
+
+  .diabexol-agisce-title {
+    font-size: 26px;
+  }
+
+  .diabexol-agisce-layout {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+
+  .agisce-steps-flow {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 22px 14px;
+    max-width: 500px;
+    margin: 0 auto;
+  }
+
+  .agisce-arrow-divider {
+    display: none;
+  }
+
+  .agisce-step-node {
+    max-width: 100%;
+    padding: 0;
+  }
+
+  .agisce-silhouette-col {
+    order: 2;
+    max-width: 240px;
+    margin: 0 auto;
+  }
+}
+
+@media (max-width: 540px) {
+  .diabexol-agisce-section {
+    padding: 34px 0 44px 0;
+  }
+
+  .diabexol-agisce-section .agisce-container {
+    padding: 0 16px;
+  }
+
+  .diabexol-agisce-title {
+    font-size: 23px;
+  }
+
+  .diabexol-agisce-subtitle {
+    font-size: 13.5px;
+  }
+
+  .agisce-steps-flow {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 18px 10px;
+  }
+
+  .agisce-icon-circle {
+    width: 44px;
+    height: 44px;
+    margin-bottom: 10px;
+  }
+
+  .agisce-node-title {
+    font-size: 12.5px;
+  }
+
+  .agisce-node-desc {
+    font-size: 11px;
+  }
+
+  .agisce-silhouette-col {
+    max-width: 200px;
+  }
+}
+
+/* ========================================================
+   SEZIONE 9: BANNER PROMOZIONALE INTERMEDIO (INIZIA OGGI)
+   ======================================================== */
+.diabexol-promo-section {
+  background-color: #FAF8F5;
+  padding: 44px 0 60px 0;
+  width: 100%;
+  position: relative;
+  border-top: 1px solid rgba(236, 228, 216, 0.45);
+}
+
+.diabexol-promo-section .promo-container {
+  max-width: var(--container-max-width, 1200px);
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+/* Card interna verde chiarissimo / menta soft */
+.diabexol-promo-card {
+  background-color: #EBF3ED;
+  border: 1px solid #D6E4D9;
+  border-radius: 24px;
+  padding: 34px 40px;
+  display: grid;
+  grid-template-columns: 240px 1fr 220px;
+  gap: 36px;
+  align-items: center;
+  position: relative;
+  box-shadow: 0 6px 24px rgba(61, 120, 71, 0.04);
+  box-sizing: border-box;
+}
+
+/* Colonna 1: Immagine Prodotto */
+.promo-visual-col {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.promo-product-img {
+  width: 100%;
+  max-width: 230px;
+  height: auto;
+  display: block;
+  filter: drop-shadow(0 12px 24px rgba(0, 0, 0, 0.09));
+  transition: transform 0.3s ease;
+}
+
+.promo-product-img:hover {
+  transform: scale(1.03);
+}
+
+/* Colonna 2: Testi, Prezzi e Trust */
+.promo-content-col {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  text-align: left;
+}
+
+.promo-title {
+  font-size: 26px;
+  font-weight: 800;
+  color: #2B2522;
+  line-height: 1.25;
+  letter-spacing: -0.02em;
+  margin: 0 0 8px 0;
+  font-family: var(--font-family, 'Plus Jakarta Sans', system-ui, sans-serif);
+}
+
+.promo-desc {
+  font-size: 14.5px;
+  line-height: 1.55;
+  color: #5D544C;
+  margin: 0 0 18px 0;
+}
+
+.promo-pricing-wrap {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 16px;
+  flex-wrap: wrap;
+}
+
+.promo-badge-tag {
+  background-color: #FAF4EB;
+  color: #7A4E2D;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  padding: 3px 10px;
+  border-radius: 9999px;
+  border: 1px solid #E4D7C7;
+}
+
+.promo-price-current {
+  font-size: 26px;
+  font-weight: 800;
+  color: #2B2522;
+  letter-spacing: -0.02em;
+}
+
+.promo-price-old {
+  font-size: 16px;
+  font-weight: 600;
+  color: #9C8F83;
+  text-decoration: line-through;
+}
+
+.promo-trust-badges {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.promo-trust-item {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  font-size: 12.5px;
+  font-weight: 600;
+  color: #4A6E50;
+}
+
+.promo-trust-item svg {
+  stroke: #3D7847;
+  flex-shrink: 0;
+}
+
+/* Colonna 3: Bottone CTA, Carte di Pagamento e Social Proof */
+.promo-action-col {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 10px;
+}
+
+.promo-cards-wrap {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 2px 0;
+}
+
+.promo-cards-img {
+  width: 100%;
+  max-width: 180px;
+  height: auto;
+  display: block;
+}
+
+.btn-promo-main {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  background-color: #7A4E2D;
+  color: #FFFFFF;
+  font-size: 15px;
+  font-weight: 800;
+  padding: 14px 30px;
+  border-radius: 9999px;
+  text-decoration: none;
+  width: 100%;
+  max-width: 200px;
+  box-sizing: border-box;
+  box-shadow: 0 4px 14px rgba(122, 78, 45, 0.28);
+  transition: all 0.25s ease;
+}
+
+.btn-promo-main:hover {
+  background-color: #643C1E;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 18px rgba(122, 78, 45, 0.35);
+}
+
+.promo-proof-text {
+  font-size: 11px;
+  font-weight: 500;
+  color: #7E7268;
+  margin: 0;
+}
+
+/* Responsive */
+@media (max-width: 991px) {
+  .diabexol-promo-card {
+    grid-template-columns: 180px 1fr;
+    gap: 24px;
+    padding: 28px 24px;
+  }
+
+  .promo-action-col {
+    grid-column: 1 / -1;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    border-top: 1px dashed rgba(61, 120, 71, 0.2);
+    padding-top: 18px;
+    margin-top: 6px;
+  }
+
+  .btn-promo-main {
+    max-width: 220px;
+  }
+}
+
+@media (max-width: 768px) {
+  .diabexol-promo-section {
+    padding: 34px 0 46px 0;
+  }
+
+  .diabexol-promo-card {
+    grid-template-columns: 1fr;
+    gap: 20px;
+    text-align: center;
+    padding: 24px 18px;
+    border-radius: 20px;
+  }
+
+  .promo-visual-col {
+    order: 1;
+  }
+
+  .promo-product-img {
+    max-width: 180px;
+    margin: 0 auto;
+  }
+
+  .promo-content-col {
+    order: 2;
+    align-items: center;
+    text-align: center;
+  }
+
+  .promo-title {
+    font-size: 22px;
+  }
+
+  .promo-desc {
+    font-size: 13.5px;
+  }
+
+  .promo-pricing-wrap {
+    justify-content: center;
+  }
+
+  .promo-trust-badges {
+    justify-content: center;
+    gap: 14px;
+  }
+
+  .promo-action-col {
+    order: 3;
+    flex-direction: column;
+    justify-content: center;
+    gap: 8px;
+    border-top: none;
+    padding-top: 0;
+    margin-top: 4px;
+  }
+
+  .btn-promo-main {
+    width: 100%;
+    max-width: 240px;
+    padding: 13px 24px;
+    font-size: 14.5px;
+  }
+}
+
+/* ========================================================
+   SEZIONE: OPINIONI ED ESPERIENZE DEGLI UTENTI (DIABEXOL PRO)
+   ======================================================== */
+.diabexol-reviews-section {
+  background-color: #FAF8F5;
+  padding: 56px 0 68px 0;
+  width: 100%;
+  position: relative;
+  border-top: 1px solid rgba(236, 228, 216, 0.45);
+}
+
+.diabexol-reviews-section .reviews-container {
+  max-width: var(--container-max-width, 1200px);
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+.diabexol-reviews-header {
+  margin-bottom: 32px;
+  text-align: left;
+}
+
+.diabexol-reviews-title {
+  font-size: 30px;
+  font-weight: 800;
+  color: #2B2522;
+  line-height: 1.25;
+  letter-spacing: -0.02em;
+  margin: 0 0 8px 0;
+  font-family: var(--font-family, 'Plus Jakarta Sans', system-ui, sans-serif);
+}
+
+.diabexol-reviews-subtitle {
+  font-size: 15px;
+  line-height: 1.55;
+  color: #6E635B;
+  margin: 0;
+}
+
+/* Contenitore Griglia / Slider Recensioni */
+.diabexol-reviews-slider {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 18px;
+  width: 100%;
+  margin-bottom: 26px;
+}
+
+/* Singola Scheda Recensione */
+.diabexol-review-card {
+  background-color: #FFFFFF;
+  border: 1px solid #ECE4D8;
+  border-radius: 18px;
+  padding: 22px 18px;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.02);
+  transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+  position: relative;
+}
+
+.diabexol-review-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 24px rgba(122, 78, 45, 0.08);
+  border-color: #DBCBB9;
+}
+
+/* Header della Scheda: Avatar rotondo a sinistra, Dati a destra */
+.review-card-header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 14px;
+}
+
+.review-avatar-wrap {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  overflow: hidden;
+  flex-shrink: 0;
+  border: 1.5px solid #EFE9DF;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.06);
+}
+
+.review-avatar-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.review-author-meta {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.review-author-name {
+  font-size: 14.5px;
+  font-weight: 700;
+  color: #2B2522;
+  margin: 0;
+  line-height: 1.25;
+}
+
+.review-verified-badge {
+  font-size: 11.5px;
+  color: #4A6E50;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+/* Stelle di Valutazione */
+.review-stars-row {
+  display: flex;
+  align-items: center;
+  gap: 3px;
+  margin-bottom: 12px;
+}
+
+.star-gold {
+  color: #F59E0B;
+  display: inline-flex;
+}
+
+.star-gold svg {
+  fill: #F59E0B;
+  stroke: #F59E0B;
+}
+
+/* Testo della recensione */
+.review-quote-text {
+  font-size: 13.5px;
+  line-height: 1.55;
+  color: #5D544C;
+  margin: 0;
+  font-style: normal;
+  flex-grow: 1;
+}
+
+/* Indicatori di navigazione (Pills / Dots) */
+.reviews-slider-indicators {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  margin-top: 10px;
+}
+
+.slider-dot-btn {
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.slider-dot-pill {
+  width: 8px;
+  height: 8px;
+  border-radius: 9999px;
+  background-color: #DACBC0;
+  transition: all 0.25s ease;
+  display: block;
+}
+
+.slider-dot-btn.active .slider-dot-pill {
+  width: 24px;
+  background-color: #7A4E2D;
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .diabexol-reviews-slider {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+  }
+}
+
+@media (max-width: 768px) {
+  .diabexol-reviews-section {
+    padding: 42px 0 52px 0;
+  }
+
+  .diabexol-reviews-header {
+    text-align: center;
+    margin-bottom: 24px;
+  }
+
+  .diabexol-reviews-title {
+    font-size: 25px;
+  }
+
+  .diabexol-reviews-subtitle {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 640px) {
+  .diabexol-reviews-section {
+    padding: 34px 0 44px 0;
+  }
+
+  .diabexol-reviews-section .reviews-container {
+    padding: 0 16px;
+  }
+
+  .diabexol-reviews-title {
+    font-size: 22px;
+  }
+
+  /* Scorrimento orizzontale controllato su smartphone con snap fluido */
+  .diabexol-reviews-slider {
+    display: flex;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+    gap: 14px;
+    padding-bottom: 12px;
+    margin-bottom: 18px;
+  }
+
+  .diabexol-reviews-slider::-webkit-scrollbar {
+    height: 4px;
+  }
+
+  .diabexol-reviews-slider::-webkit-scrollbar-thumb {
+    background-color: #D6C7B2;
+    border-radius: 9999px;
+  }
+
+  .diabexol-review-card {
+    flex: 0 0 280px;
+    max-width: 280px;
+    scroll-snap-align: center;
+    padding: 18px 16px;
+  }
+
+  .review-quote-text {
+    font-size: 13px;
+  }
+}
+
+/* ========================================================
+   SEZIONE 10: FAQ / DOMANDE FREQUENTI SU DIABEXOL PRO (#faq)
+   Fedele al Mockup Originale Diabexol Pro
+   ======================================================== */
+.diabexol-faq-section {
+  background-color: #FAF8F5;
+  padding: 56px 0 68px 0;
+  border-top: 1px solid rgba(0, 0, 0, 0.04);
+}
+
+.diabexol-faq-container {
+  max-width: var(--container-max-width, 1180px);
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+.diabexol-faq-header {
+  margin-bottom: 32px;
+  text-align: left;
+}
+
+.diabexol-faq-kicker {
+  display: inline-block;
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #7A421D;
+  margin-bottom: 6px;
+}
+
+.diabexol-faq-title {
+  font-family: var(--font-family, 'Plus Jakarta Sans', sans-serif);
+  font-size: 26px;
+  font-weight: 800;
+  color: #241D17;
+  letter-spacing: -0.02em;
+  line-height: 1.25;
+  margin: 0 0 6px 0;
+}
+
+.diabexol-faq-subtitle {
+  font-size: 14.5px;
+  color: #635A52;
+  font-weight: 500;
+  margin: 0;
+  line-height: 1.45;
+}
+
+/* Layout a due colonne: Domande a sinistra (1.6fr), Riquadro a destra (1fr) */
+.diabexol-faq-layout {
+  display: grid;
+  grid-template-columns: 1.6fr 1fr;
+  gap: 36px;
+  align-items: start;
+}
+
+/* Colonna Sinistra: Lista Domande Accordion */
+.diabexol-faq-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.diabexol-faq-item.faq-item {
+  background-color: #FFFFFF;
+  border: 1px solid #EBE4D8;
+  border-radius: 10px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.02);
+  transition: border-color 0.2s ease, box-shadow 0.2s ease, background-color 0.2s ease;
+  overflow: hidden;
+}
+
+.diabexol-faq-item.faq-item:hover {
+  border-color: #D3C3AD;
+  box-shadow: 0 4px 12px rgba(110, 63, 32, 0.05);
+}
+
+.diabexol-faq-item.faq-item.is-open {
+  border-color: #C8B59D;
+  background-color: #FAF8F5;
+}
+
+.diabexol-faq-item .faq-question-heading {
+  margin: 0;
+  font-size: inherit;
+  font-weight: inherit;
+}
+
+.diabexol-faq-item .faq-trigger {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 15px 20px;
+  background: none;
+  border: none;
+  text-align: left;
+  cursor: pointer;
+  font-family: inherit;
+  font-size: 14.5px;
+  font-weight: 600;
+  color: #2C2621;
+  transition: color 0.2s ease;
+}
+
+.diabexol-faq-item .faq-trigger:hover {
+  color: #7A421D;
+}
+
+.diabexol-faq-item .faq-trigger:focus-visible {
+  outline: 2px solid #7A421D;
+  outline-offset: -2px;
+  border-radius: 8px;
+}
+
+.diabexol-faq-item .faq-question-text {
+  flex: 1;
+  line-height: 1.4;
+}
+
+.diabexol-faq-item .faq-icon {
+  width: 24px;
+  height: 24px;
+  min-width: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #7A421D;
+  font-size: 16px;
+  background: none;
+  transition: transform 0.2s ease;
+}
+
+.diabexol-faq-item .faq-icon .icon-plus,
+.diabexol-faq-item .faq-icon .icon-minus {
+  stroke-width: 2.4;
+}
+
+.diabexol-faq-item.faq-item.is-open .faq-question-text {
+  color: #7A421D;
+}
+
+.diabexol-faq-item .faq-answer-inner {
+  padding: 0 20px 16px 20px;
+}
+
+.diabexol-faq-item .faq-answer-inner p {
+  font-size: 13.5px;
+  line-height: 1.6;
+  color: #554D45;
+  margin: 0;
+}
+
+/* Colonna Destra: Card Vetrina con Immagine del Prodotto Diabexol Pro */
+.diabexol-faq-visual-col {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.diabexol-faq-product-card {
+  width: 100%;
+  background: transparent;
+  border: none;
+  box-shadow: none;
+  padding: 10px 0;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: sticky;
+  top: 100px;
+}
+
+.diabexol-faq-product-card:hover {
+  box-shadow: none;
+  border-color: transparent;
+}
+
+.diabexol-faq-product-img {
+  width: 100%;
+  max-width: 420px;
+  height: auto;
+  object-fit: contain;
+  filter: drop-shadow(0 16px 30px rgba(0, 0, 0, 0.12));
+  transition: transform 0.3s cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+
+.diabexol-faq-product-card:hover .diabexol-faq-product-img {
+  transform: translateY(-4px) scale(1.02);
+}
+
+/* Compatibilità con cartella di contatto precedente se riutilizzata */
+.diabexol-faq-contact-card {
+  background-color: #F5EFE6;
+  border: 1px solid #ECE3D4;
+  border-radius: 18px;
+  padding: 38px 28px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.03);
+}
+
+.diabexol-faq-contact-icon {
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  background-color: #6E3F20;
+  color: #FFFFFF;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 16px;
+  box-shadow: 0 4px 12px rgba(110, 63, 32, 0.18);
+}
+
+.diabexol-faq-contact-title {
+  font-family: var(--font-family, 'Plus Jakarta Sans', sans-serif);
+  font-size: 18px;
+  font-weight: 700;
+  color: #241D17;
+  letter-spacing: -0.01em;
+  margin: 0 0 6px 0;
+}
+
+.diabexol-faq-contact-desc {
+  font-size: 13.5px;
+  color: #665D54;
+  line-height: 1.45;
+  margin: 0 0 22px 0;
+  max-width: 240px;
+}
+
+.diabexol-faq-contact-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #6E3F20;
+  color: #FFFFFF;
+  font-family: var(--font-family, 'Plus Jakarta Sans', sans-serif);
+  font-size: 14px;
+  font-weight: 700;
+  padding: 11px 34px;
+  border-radius: 50px;
+  text-decoration: none;
+  box-shadow: 0 4px 14px rgba(110, 63, 32, 0.22);
+  transition: background-color 0.2s ease, transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.diabexol-faq-contact-btn:hover {
+  background-color: #552F16;
+  color: #FFFFFF;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 18px rgba(110, 63, 32, 0.3);
+}
+
+.diabexol-faq-contact-btn:active {
+  transform: translateY(0);
+}
+
+/* Responsività per Tablet e Mobile */
+@media (max-width: 880px) {
+  .diabexol-faq-layout {
+    grid-template-columns: 1fr;
+    gap: 28px;
+  }
+
+  .diabexol-faq-product-card {
+    position: static;
+    padding: 10px 0;
+    background: transparent;
+    border: none;
+    box-shadow: none;
+  }
+
+  .diabexol-faq-contact-card {
+    padding: 30px 24px;
+  }
+}
+
+@media (max-width: 650px) {
+  .diabexol-faq-section {
+    padding: 42px 0 52px 0;
+  }
+
+  .diabexol-faq-header {
+    margin-bottom: 24px;
+  }
+
+  .diabexol-faq-title {
+    font-size: 22px;
+  }
+
+  .diabexol-faq-subtitle {
+    font-size: 13.5px;
+  }
+
+  .diabexol-faq-item .faq-trigger {
+    padding: 14px 16px;
+    font-size: 14px;
+    gap: 12px;
+  }
+
+  .diabexol-faq-item .faq-answer-inner {
+    padding: 0 16px 14px 16px;
+  }
+
+  .diabexol-faq-item .faq-answer-inner p {
+    font-size: 13px;
+  }
+
+  .diabexol-faq-product-card {
+    padding: 10px 0;
+    background: transparent;
+    border: none;
+    box-shadow: none;
+  }
+
+  .diabexol-faq-product-img {
+    max-width: 300px;
+  }
+
+  .diabexol-faq-contact-card {
+    padding: 26px 20px;
+    border-radius: 14px;
+  }
+
+  .diabexol-faq-contact-icon {
+    width: 46px;
+    height: 46px;
+    margin-bottom: 14px;
+  }
+
+  .diabexol-faq-contact-icon svg {
+    width: 22px;
+    height: 22px;
+  }
+
+  .diabexol-faq-contact-title {
+    font-size: 17px;
+  }
+
+  .diabexol-faq-contact-desc {
+    font-size: 13px;
+    margin-bottom: 18px;
+  }
+
+  .diabexol-faq-contact-btn {
+    width: 100%;
+    max-width: 240px;
+    padding: 11px 24px;
+  }
+}
+
+/* ========================================================
+   SEZIONE 11: PRODOTTI SIMILI – DIABEXOL PRO (#prodotti-simili)
+   Fedele al Mockup Originale Diabexol Pro
+   ======================================================== */
+.diabexol-similar-section {
+  background-color: #FAF8F5;
+  padding: 56px 0 72px 0;
+  border-top: 1px solid rgba(0, 0, 0, 0.04);
+}
+
+.diabexol-similar-container {
+  max-width: var(--container-max-width, 1180px);
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+.diabexol-similar-header {
+  margin-bottom: 28px;
+  text-align: left;
+}
+
+.diabexol-similar-title {
+  font-family: var(--font-family, 'Plus Jakarta Sans', sans-serif);
+  font-size: 24px;
+  font-weight: 800;
+  color: #241D17;
+  letter-spacing: -0.02em;
+  line-height: 1.25;
+  margin: 0 0 6px 0;
+}
+
+.diabexol-similar-subtitle {
+  font-size: 14px;
+  color: #635A52;
+  font-weight: 500;
+  margin: 0;
+  line-height: 1.45;
+}
+
+.diabexol-similar-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+
+.diabexol-similar-card {
+  background-color: #FFFFFF;
+  border: 1px solid #EBE4D8;
+  border-radius: 14px;
+  padding: 20px 18px 18px 18px;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.03);
+  transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+}
+
+.diabexol-similar-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 24px rgba(110, 63, 32, 0.08);
+  border-color: #D6C7B2;
+}
+
+.similar-card-img-wrap {
+  width: 100%;
+  height: 135px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 14px;
+  background-color: #FAF8F4;
+  border-radius: 10px;
+  padding: 8px;
+  overflow: hidden;
+}
+
+.similar-card-img {
+  max-width: 100%;
+  max-height: 125px;
+  width: auto;
+  height: auto;
+  object-fit: contain;
+  transition: transform 0.25s ease;
+}
+
+.diabexol-similar-card:hover .similar-card-img {
+  transform: scale(1.04);
+}
+
+.similar-card-body {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.similar-card-name {
+  font-family: var(--font-family, 'Plus Jakarta Sans', sans-serif);
+  font-size: 15.5px;
+  font-weight: 700;
+  color: #241D17;
+  margin: 0 0 4px 0;
+  line-height: 1.3;
+}
+
+.similar-card-category {
+  font-size: 12px;
+  font-weight: 600;
+  color: #7A421D;
+  margin: 0 0 6px 0;
+  line-height: 1.3;
+}
+
+.similar-card-desc {
+  font-size: 12px;
+  color: #635A52;
+  line-height: 1.45;
+  margin: 0 0 16px 0;
+  min-height: 52px;
+}
+
+.similar-card-pricing {
+  display: flex;
+  align-items: baseline;
+  gap: 8px;
+  margin-bottom: 14px;
+  margin-top: auto;
+}
+
+.similar-price-current {
+  font-size: 18px;
+  font-weight: 800;
+  color: #241D17;
+}
+
+.similar-price-old {
+  font-size: 13px;
+  color: #8C847A;
+  text-decoration: line-through;
+  font-weight: 500;
+}
+
+.similar-card-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  background-color: #6E3F20;
+  color: #FFFFFF;
+  font-family: var(--font-family, 'Plus Jakarta Sans', sans-serif);
+  font-size: 13.5px;
+  font-weight: 700;
+  padding: 10px 18px;
+  border-radius: 50px;
+  text-decoration: none;
+  box-shadow: 0 3px 10px rgba(110, 63, 32, 0.2);
+  transition: background-color 0.2s ease, transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.similar-card-btn:hover {
+  background-color: #552F16;
+  color: #FFFFFF;
+  transform: translateY(-1px);
+  box-shadow: 0 5px 14px rgba(110, 63, 32, 0.28);
+}
+
+.similar-card-btn .btn-arrow {
+  transition: transform 0.2s ease;
+}
+
+.similar-card-btn:hover .btn-arrow {
+  transform: translateX(3px);
+}
+
+/* Indicatori di navigazione Prodotti Simili (Pills / Dots) */
+.similar-slider-indicators {
+  display: none;
+}
+
+.similar-slider-indicators .slider-dot-btn {
+  background: none;
+  border: none;
+  padding: 8px 6px;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  touch-action: manipulation;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.similar-slider-indicators .slider-dot-pill {
+  width: 8px;
+  height: 8px;
+  border-radius: 9999px;
+  background-color: #DACBC0;
+  transition: all 0.25s ease;
+  display: block;
+}
+
+.similar-slider-indicators .slider-dot-btn.active .slider-dot-pill {
+  width: 26px;
+  background-color: #6E3F20;
+}
+
+/* Responsività */
+@media (max-width: 1024px) {
+  .diabexol-similar-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+  }
+}
+
+@media (max-width: 768px) {
+  .diabexol-similar-section {
+    padding: 38px 0 48px 0;
+  }
+
+  .diabexol-similar-container {
+    padding: 0 16px;
+  }
+
+  .diabexol-similar-header {
+    margin-bottom: 20px;
+    text-align: left;
+  }
+
+  .diabexol-similar-title {
+    font-size: 21px;
+  }
+
+  .diabexol-similar-subtitle {
+    font-size: 13.5px;
+  }
+
+  .diabexol-similar-grid {
+    display: flex !important;
+    flex-direction: row !important;
+    flex-wrap: nowrap !important;
+    overflow-x: auto !important;
+    -webkit-overflow-scrolling: touch;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+    gap: 14px;
+    width: auto;
+    padding: 6px 16px 14px 16px;
+    margin: 0 -16px;
+    touch-action: pan-x pan-y;
+  }
+
+  .diabexol-similar-grid::-webkit-scrollbar {
+    height: 4px;
+  }
+
+  .diabexol-similar-grid::-webkit-scrollbar-thumb {
+    background-color: #D6C7B2;
+    border-radius: 9999px;
+  }
+
+  .diabexol-similar-card {
+    flex: 0 0 260px !important;
+    min-width: 260px !important;
+    max-width: 260px !important;
+    scroll-snap-align: start;
+    scroll-snap-stop: normal;
+    padding: 18px 16px;
+  }
+
+  .similar-card-img-wrap {
+    height: 125px;
+  }
+
+  .similar-card-img {
+    pointer-events: none;
+    -webkit-user-drag: none;
+    user-select: none;
+  }
+
+  .similar-card-name {
+    font-size: 14.5px;
+  }
+
+  .similar-card-desc {
+    min-height: auto;
+  }
+
+  .similar-price-current {
+    font-size: 17px;
+  }
+
+  .similar-slider-indicators {
+    display: flex !important;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    margin-top: 14px;
+  }
+}
+
+
+
+
+
+
 

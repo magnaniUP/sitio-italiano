@@ -222,7 +222,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // Aggancia tutti i pulsanti Ordina ora
   const orderButtons = document.querySelectorAll(
-    '#headerCtaBtn, .mobile-btn-cta, #heroCtaBtn, .btn-promo-cta, .uroprostan-btn-promo, a[href="#ordina"]'
+    '#headerCtaBtn, .mobile-btn-cta, #heroCtaBtn, .btn-promo-cta, .uroprostan-btn-promo, .btn-promo-main, .btn-compare-cta, .diabexol-btn-cta, a[href="#ordina"]'
   );
 
   orderButtons.forEach(btn => {
@@ -287,11 +287,14 @@ document.addEventListener('DOMContentLoaded', () => {
       const formData = new FormData(orderLeadForm);
       const isUroprostan = window.location.pathname.includes('/uroprostan');
       const isAdenofrin = window.location.pathname.includes('/adenofrin');
-      const actionUrl = orderLeadForm.getAttribute('action') || (isUroprostan ? '/uroprostan/uroprostan.php' : (isAdenofrin ? '/adenofrin/adenofrin.php' : '/slimmatica/slimmatica.php'));
-      const thankYouTarget = isUroprostan
-        ? '/uroprostan/uroprostansuccess.html'
-        : (isAdenofrin ? '/adenofrin/grazie.html' : (window.location.pathname.includes('/slimmatica') ? '/slimmatica/grazie.html' : '/grazie.html'));
-      const fallbackApiUrl = isUroprostan ? '/api/uroprostan' : (isAdenofrin ? '/api/adenofrin' : '/api/slimmatica');
+      const isDiabexol = window.location.pathname.includes('/diabexol') || window.location.pathname.includes('/dibaxol');
+      const actionUrl = orderLeadForm.getAttribute('action') || (isDiabexol ? 'diabexol.php' : (isUroprostan ? '/uroprostan/uroprostan.php' : (isAdenofrin ? '/adenofrin/adenofrin.php' : '/slimmatica/slimmatica.php')));
+      const thankYouTarget = isDiabexol
+        ? '/diabexol-pro/diabexolpro.html'
+        : (isUroprostan
+          ? '/uroprostan/uroprostansuccess.html'
+          : (isAdenofrin ? '/adenofrin/grazie.html' : (window.location.pathname.includes('/slimmatica') ? '/slimmatica/grazie.html' : '/grazie.html')));
+      const fallbackApiUrl = isDiabexol ? '/api/diabexol' : (isUroprostan ? '/api/uroprostan' : (isAdenofrin ? '/api/adenofrin' : '/api/slimmatica'));
 
       const postData = new URLSearchParams();
       formData.forEach((val, key) => postData.append(key, val));
